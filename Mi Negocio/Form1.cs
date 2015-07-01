@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mi_Negocio.Connection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,15 +20,12 @@ namespace Mi_Negocio
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Text = AppDomain.CurrentDomain.BaseDirectory;
-            string path = AppDomain.CurrentDomain.BaseDirectory.ToString();
-            XmlDocument xDoc = new XmlDocument();
-            xDoc.Load("config.xml");
-            XmlNode configuracion = xDoc.DocumentElement.SelectSingleNode("/configuracion/database");
-            textBox1.Text = configuracion.Attributes["host"].Value;
-            textBox2.Text = configuracion.Attributes["database"].Value;
-            textBox3.Text = configuracion.Attributes["usuario"].Value;
-            textBox4.Text = configuracion.Attributes["password"].Value;
+            iniConfig cfg = new iniConfig();
+            cfg.getConfigDatabase();
+            textBox1.Text = cfg.db_host;
+            textBox2.Text = cfg.db_password;
+            textBox3.Text = cfg.db_user;
+            textBox4.Text = cfg.db_database;
 
             /*
              * XmlDocument doc = new XmlDocument();
