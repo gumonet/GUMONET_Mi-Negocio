@@ -1,4 +1,5 @@
-﻿using Mi_Negocio.Connection;
+﻿using Mi_Negocio.Datasource;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,38 +27,11 @@ namespace Mi_Negocio
             textBox2.Text = cfg.db_password;
             textBox3.Text = cfg.db_user;
             textBox4.Text = cfg.db_database;
+        }
 
-            /*
-             * XmlDocument doc = new XmlDocument();
-doc.LoadXml(xmlstring);
-
-XmlNode errorNode = doc.DocumentElement.SelectSingleNode("/DataChunk/ResponseChunk/Errors/error");
-
-string errorCode = errorNode.Attributes["code"].Value;
-string errorMessage = errorNode.InnerText;
-             * 
-             * 
-             * XmlNodeList personas = xDoc.GetElementsByTagName("personas");
-XmlNodeList lista = 
-    ((XmlElement)personas[0]).GetElementsByTagName("persona"); 
-foreach (XmlElement nodo in lista)
-{
-int i=0;
-XmlNodeList nNombre = 
-nodo.GetElementsByTagName("nombre");
-
-XmlNodeList nApellido1 = 
-nodo.GetElementsByTagName("apellido1");
-
-XmlNodeList nApellido2 = 
-nodo.GetElementsByTagName("apellido2");
-
-Console.WriteLine("Elemento nombre ... {0} {1} {2}", 
-                             nNombre[i].InnerText, 
-                             nApellido1[i].InnerText,
-                             nApellido2[i++].InnerText);
-
-} */
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexion = Connection.ObtenerConexion();
         }
     }
 }

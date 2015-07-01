@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 
-namespace Mi_Negocio.Connection
+namespace Mi_Negocio.Datasource
 {
     class iniConfig
     {

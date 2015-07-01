@@ -48,8 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection\Connection.cs" />
-    <Compile Include="Connection\iniConfig.cs" />
+    <Compile Include="Almacenes\Categorias\Categoria.cs" />
+    <Compile Include="Almacenes\Categorias\CategoriaDal.cs" />
+    <Compile Include="Clientes\Ciente.cs" />
+    <Compile Include="Clientes\ClienteDal.cs" />
+    <Compile Include="Datasource\Connection.cs" />
+    <Compile Include="Datasource\iniConfig.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +85,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Clientes\" />
+    <Folder Include="Almacenes\Movimientos\" />
+    <Folder Include="Almacenes\Productos\" />
+    <Folder Include="Almacenes\Proveedores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
