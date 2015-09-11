@@ -8,3 +8,13 @@ C:\RECURSOS\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
 C:\RECURSOS\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Form1.resources
 B:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
 B:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.exe
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.pdb
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\MySql.Data.dll
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csprojResolveAssemblyReference.cache
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.Clientes.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Form1.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Properties.Resources.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csproj.GenerateResource.Cache
