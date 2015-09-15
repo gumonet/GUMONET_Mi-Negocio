@@ -60,8 +60,8 @@ namespace Mi_Negocio.Clientes
                 {
                     pCliente.id_cliente = reader.GetInt32(0);
                     pCliente.nombre = reader.GetString(1);
-                    pCliente.encargado = reader.GetString(2);
-                    pCliente.razon_social = reader.GetString(3);
+                    pCliente.encargado = (reader.IsDBNull(2)) ? "" : reader.GetString(2);
+                    pCliente.razon_social = reader.GetValue(3).ToString();
                     pCliente.rfc = reader.GetString(4);
                     pCliente.calle = reader.GetString(5);
                     pCliente.n_ext = reader.GetString(6);

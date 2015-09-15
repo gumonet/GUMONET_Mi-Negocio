@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <configuracion>
-  <database host="localhost" database="gm_negocio" usuario="root" password="123">  </database>  
+  <database host="localhost" database="gm_negocio" usuario="root" password="1234">  </database>  
 </configuracion>

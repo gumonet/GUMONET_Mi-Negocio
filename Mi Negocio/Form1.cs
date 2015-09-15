@@ -1,4 +1,5 @@
-﻿using Mi_Negocio.Datasource;
+﻿using Mi_Negocio.Clientes;
+using Mi_Negocio.Datasource;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,13 @@ namespace Mi_Negocio
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection conexion = Connection.ObtenerConexion();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmClientes frmClientes = new frmClientes();
+            frmClientes.ShowDialog();
+
         }
     }
 }
