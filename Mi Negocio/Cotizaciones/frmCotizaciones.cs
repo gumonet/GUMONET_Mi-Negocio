@@ -7,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Mi_Negocio.frmCotizaciones
+namespace Mi_Negocio.Cotizaciones
 {
-    public partial class frmDetalle : Form
+    public partial class frmCotizaciones : Form
     {
-        private int empresa_actual { get; set; }
-        public frmDetalle()
+        public frmCotizaciones()
         {
             InitializeComponent();
         }
@@ -46,9 +45,9 @@ namespace Mi_Negocio.frmCotizaciones
 
         private void fAbrirFactura()
         {
-            string idCotizacion = dataFacturas["id_cotizacion", dataFacturas.CurrentCell.RowIndex].Value.ToString();
+           Int64 id_cotizacion = Convert.ToInt64(dataFacturas["id_cotizacion", dataFacturas.CurrentCell.RowIndex].Value);
             frmDetalle det = new frmDetalle();
-            det.idCotizacion = this.idCotizacion;
+            det.id_cotizacion = id_cotizacion;
             if (det.ShowDialog() != DialogResult.OK) //se coloca OK solo para que siempre se ejecute, por que el formulario no regresa nada
             {
                 floadFacturas();
@@ -60,10 +59,10 @@ namespace Mi_Negocio.frmCotizaciones
             int status_factura = Convert.ToInt32(dataFacturas["timbrado", dataFacturas.CurrentCell.RowIndex].Value.ToString());
             if (status_factura == 1)
             {
-                string idFactura = dataFacturas["id_factura", dataFacturas.CurrentCell.RowIndex].Value.ToString();
+                Int64 id_cotizacion = Convert.ToInt64(dataFacturas["id_cotizacion", dataFacturas.CurrentCell.RowIndex].Value);
                 if (MessageBox.Show("¿Esta seguro de Eliminar la Factura?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                 {
-                    if (CotizacionDal.eliminar(idFactura) > 0)
+                    if (CotizacionDal.eliminar(id_cotizacion) > 0)
                     {
                         MessageBox.Show("La Factura Fue Eliminada con Exito", "Factura Eliminada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         floadFacturas();
@@ -77,16 +76,16 @@ namespace Mi_Negocio.frmCotizaciones
 
         }
 
-        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+       /* private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDetalle det = new frmDetalle();
-            det.empresa_actual = this.empresa_actual;
+            det.id_cotizacion = this.empresa_actual;
             if (det.ShowDialog() != DialogResult.OK) //se coloca OK solo para que siempre se ejecute, por que el formulario no regresa nada
             {
                 floadFacturas();
             }
 
-        }
+        }*/
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -109,9 +108,9 @@ namespace Mi_Negocio.frmCotizaciones
 
         private void floadFacturas()
         {
-            string searchDate = "fecha BETWEEN '" + Convert.ToDateTime(dateInicio.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(dateFinal.Text).ToString("yyyy-MM-dd") + "' ";
+            string searchDate = " AND fecha BETWEEN '" + Convert.ToDateTime(dateInicio.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(dateFinal.Text).ToString("yyyy-MM-dd") + "' ";
             dataFacturas.AutoGenerateColumns = false;
-            dataFacturas.DataSource = FacturaDal.buscar(this.empresa_actual, searchDate, txtSearch.Text);
+            dataFacturas.DataSource = CotizacionDal.buscar(txtSearch.Text, searchDate );
             foreach (DataGridViewRow row in dataFacturas.Rows)
             {
                 switch (Convert.ToInt32(row.Cells["timbrado"].Value))
@@ -130,16 +129,15 @@ namespace Mi_Negocio.frmCotizaciones
 
         private void btnNuevaFactura_Click(object sender, EventArgs e)
         {
-            frmCotizacion det = new frmCotizacion();
-            det.empresa_actual = this.empresa_actual;
+            frmDetalle det = new frmDetalle();
             if (det.ShowDialog() != DialogResult.OK) //se coloca OK solo para que siempre se ejecute, por que el formulario no regresa nada
             {
                 floadFacturas();
             }
         }
 
-    /*    private void btnImprimir_Click(object sender, EventArgs e)
-        {
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {/*
             if (dataFacturas.RowCount > 0)
             {
                 if (Convert.ToInt32(dataFacturas["timbrado", dataFacturas.CurrentCell.RowIndex].Value.ToString()) == 2)
@@ -164,11 +162,11 @@ namespace Mi_Negocio.frmCotizaciones
             else
             {
                 MessageBox.Show("No existen facturas para imprimir", "¡ Alerta !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            }*/
         }
-        */
+        
         private void btnEnviar_Click(object sender, EventArgs e)
-        {
+        {/*
             if (dataFacturas.RowCount > 0)
             {
                 if (Convert.ToInt32(dataFacturas["timbrado", dataFacturas.CurrentCell.RowIndex].Value.ToString()) == 2)
@@ -195,7 +193,7 @@ namespace Mi_Negocio.frmCotizaciones
                 MessageBox.Show("No existen facturas para enviar", "¡ Alerta !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
-
+*/
         }
 
     }

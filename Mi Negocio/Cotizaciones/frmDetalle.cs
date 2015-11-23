@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Mi_Negocio.frmDetalle
+namespace Mi_Negocio.Cotizaciones
 {
     public partial class frmDetalle : Form
     {
         private int idCliente { get; set; }
         private String vRfcEmisor;
-        public int idCotizacion { get; set; }
+        public Int64 id_cotizacion { get; set; }
         public string id_factura { get; set; }
         private int guardado = 1;
         private string svUuid { get; set; }
@@ -57,6 +57,11 @@ namespace Mi_Negocio.frmDetalle
         }
 
         private void btnConceptoAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

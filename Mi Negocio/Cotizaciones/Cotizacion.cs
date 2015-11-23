@@ -7,7 +7,7 @@ namespace Mi_Negocio.Cotizaciones
 {
     class Cotizacion
     {
-        public int id_cotizacion { get; set; }
+        public Int64 id_cotizacion { get; set; }
         public String folio { get; set; }
         public int id_cliente { get; set; }
         public DateTime fecha { get; set; }
@@ -19,6 +19,10 @@ namespace Mi_Negocio.Cotizaciones
         public decimal iva { get; set; }
         public decimal total { get; set; }
         public int status { get; set; }
+
+        /*Custom fields*/
+        public string cliente { get; set; }
+        public string str_status { get; set; }
 
         public Cotizacion()
         {

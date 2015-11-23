@@ -19,7 +19,7 @@ namespace Mi_Negocio.Clientes
 
          private void Clientes_Load(object sender, EventArgs e)
         {
-            //fLoadForm();
+            fLoadForm();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -113,10 +113,6 @@ namespace Mi_Negocio.Clientes
                 MessageBox.Show("Por favor seleccione un Cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-        
-
 
         /*Cuatom Form*/
         private void fLoadForm()

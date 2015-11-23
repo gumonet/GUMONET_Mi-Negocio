@@ -7,27 +7,22 @@ using System.Text;
 
 namespace Mi_Negocio.Cotizaciones
 {
-    class CotizacionDal
+    class DetalleDal
     {
 
-
-        public static int agregar(Cotizacion pData)
+        public static int agregar(Detalle pData)
         {
             int retorno = 0;
             MySqlConnection conexion = Connection.ObtenerConexion();
-            string squery = string.Format("INSERT INTO cotizaciones( folio, id_cliente, fecha, condicion_pago, plazo_entrega, cond_embarque, atn, subtotal, iva, total, status ) "
-            + " VALUES ('{0}' ,'{1}' ,'{2}' ,'{3}' ,'{4}' ,'{5}' ,'{6}' ,'{7}' ,'{8}' ,'{9}' ,'{10}')",
-                pData.folio
-                , pData.id_cliente
-                , pData.fecha
-                , pData.condicion_pago
-                , pData.plazo_entrega
-                , pData.cond_embarque
-                , pData.atn
-                , pData.subtotal
-                , pData.iva
-                , pData.total
-                , pData.status
+            string squery = string.Format("INSERT INTO cotizaciones_detalle ( id_detalle, id_cotizacion, id_producto, cantidad, importe_iva, precio, importe_ieps) "
+            + " VALUES (  {0} ,{1} ,{2} ,{3} ,{4} ,{5} ,{6})",
+                pData.id_detalle,
+                 pData.id_cotizacion,
+                 pData.id_producto,
+                 pData.cantidad,
+                 pData.importe_iva,
+                 pData.precio,
+                 pData.importe_ieps
            );
             MySqlCommand cmd = new MySqlCommand(squery, conexion);
             conexion.Close();
@@ -38,21 +33,24 @@ namespace Mi_Negocio.Cotizaciones
             List<Cotizacion> _lista = new List<Cotizacion>();
             MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(String.Format(
-                "SELECT vc.id_cotizacion, vc.cliente, vc.folio, vc.fecha, vc.str_status, vc.iva, vc.ieps, vc.subtotal, vc.total FROM v_cotizaciones vc where campo_buscar like '%{0}%' {1} ", pSearch, date), conexion);
+                "SELECT id_cotizacion, folio, id_cliente, fecha, condicion_pago, plazo_entrega, cond_embarque, atn, subtotal, iva, total, status from v_cotizaciones where campo_buscar like '%{0}%' {1} ", pSearch, date), conexion);
 
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 Cotizacion pData = new Cotizacion();
                 pData.id_cotizacion = reader.GetInt64(0);
-                pData.cliente = reader.GetString(1);
-                pData.folio = reader.GetString(2);
-                pData.fecha = reader.GetDateTime(3);                
-                pData.str_status = reader.GetString(4);
-                pData.iva = reader.GetDecimal(5);   
-                pData.subtotal = reader.GetDecimal(7);
-                pData.total = reader.GetDecimal(8);
-                pData.status = reader.GetInt32(9);
+                pData.folio = reader.GetString(1);
+                pData.id_cliente = (1);
+                pData.fecha = reader.GetDateTime(3);
+                pData.condicion_pago = reader.GetString(4);
+                pData.plazo_entrega = reader.GetString(5);
+                pData.cond_embarque = reader.GetString(6);
+                pData.atn = reader.GetString(7);
+                pData.subtotal = reader.GetDecimal(8);
+                pData.iva = reader.GetDecimal(9);
+                pData.total = reader.GetDecimal(10);
+                pData.status = reader.GetInt32(11);
 
                 _lista.Add(pData);
             }

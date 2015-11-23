@@ -1,6 +1,6 @@
-﻿namespace Mi_Negocio.frmCotizaciones
+﻿namespace Mi_Negocio.Cotizaciones
 {
-    partial class frmDetalle
+    partial class frmCotizaciones
     {
         /// <summary>
         /// Required designer variable.

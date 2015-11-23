@@ -70,8 +70,52 @@
     <Compile Include="Clientes\frmListClientes.Designer.cs">
       <DependentUpon>frmListClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contabilidad\Categoria.cs" />
+    <Compile Include="Contabilidad\CategoriaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CategoriaForm.Designer.cs">
+      <DependentUpon>CategoriaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\CategriaDal.cs" />
+    <Compile Include="Contabilidad\Cuenta.cs" />
+    <Compile Include="Contabilidad\CuentaDal.cs" />
+    <Compile Include="Contabilidad\CuentaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\CuentaForm.Designer.cs">
+      <DependentUpon>CuentaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\frmContabilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\frmContabilidad.Designer.cs">
+      <DependentUpon>frmContabilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\Movimiento.cs" />
+    <Compile Include="Contabilidad\MovimientoDal.cs" />
+    <Compile Include="Contabilidad\MovimientoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\MovimientoForm.Designer.cs">
+      <DependentUpon>MovimientoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\MovimientoListaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\MovimientoListaForm.Designer.cs">
+      <DependentUpon>MovimientoListaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cotizaciones\Cotizacion.cs" />
     <Compile Include="Cotizaciones\CotizacionDal.cs" />
+    <Compile Include="Cotizaciones\Detalle.cs" />
+    <Compile Include="Cotizaciones\DetalleDal.cs" />
+    <Compile Include="Cotizaciones\frmDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotizaciones\frmDetalle.Designer.cs">
+      <DependentUpon>frmDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cotizaciones\frmCotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +139,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\frmListClientes.resx">
       <DependentUpon>frmListClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CategoriaForm.resx">
+      <DependentUpon>CategoriaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\CuentaForm.resx">
+      <DependentUpon>CuentaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\frmContabilidad.resx">
+      <DependentUpon>frmContabilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\MovimientoForm.resx">
+      <DependentUpon>MovimientoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\MovimientoListaForm.resx">
+      <DependentUpon>MovimientoListaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cotizaciones\frmDetalle.resx">
+      <DependentUpon>frmDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cotizaciones\frmCotizaciones.resx">
       <DependentUpon>frmCotizaciones.cs</DependentUpon>
