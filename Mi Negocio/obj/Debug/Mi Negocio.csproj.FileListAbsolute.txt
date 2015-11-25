@@ -24,9 +24,8 @@ D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad
 D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.frmContabilidad.resources
 D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.CuentaForm.resources
 D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.MovimientoForm.resources
-F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
-F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
-F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csprojResolveAssemblyReference.cache
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.exe
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.pdb
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmClientes.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmListClientes.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.CategoriaForm.resources
@@ -39,5 +38,6 @@ F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Cot
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Form1.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Properties.Resources.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csproj.GenerateResource.Cache
-F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.exe
-F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.pdb
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csprojResolveAssemblyReference.cache

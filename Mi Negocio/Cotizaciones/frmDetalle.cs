@@ -91,6 +91,7 @@ namespace Mi_Negocio.Cotizaciones
             pData.status = 0;
             pData.forma_pago ="";
             pData.metodo_pago = "";
+            pData.ieps = 0;
 
             this.id_cotizacion = CotizacionDal.agregar(pData);
 

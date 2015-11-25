@@ -30,7 +30,7 @@ namespace Mi_Negocio.Cotizaciones
             List<Cotizacion> _lista = new List<Cotizacion>();
             MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(String.Format(
-                "SELECT vc.id_cotizacion, vc.cliente, vc.folio, vc.fecha, vc.str_status, vc.iva, vc.ieps, vc.subtotal, vc.total FROM v_cotizaciones vc where cliente like '%{0}%' {1} ", pSearch, date), conexion);
+                "SELECT vc.id_cotizacion, vc.cliente, vc.folio, vc.fecha, vc.str_status, vc.iva, vc.ieps, vc.subtotal, vc.total, vc.status  FROM v_cotizaciones vc where cliente like '%{0}%' {1} ", pSearch, date), conexion);
 
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -40,8 +40,9 @@ namespace Mi_Negocio.Cotizaciones
                 pData.cliente = reader.GetString(1);
                 pData.folio = reader.GetString(2);
                 pData.fecha = reader.GetDateTime(3);                
-                pData.str_status = reader.GetString(4);
-                pData.iva = reader.GetDecimal(5);   
+                //pData.str_status = reader.GetString(4);
+                pData.iva = reader.GetDecimal(5);
+                pData.ieps = reader.GetDecimal(6);
                 pData.subtotal = reader.GetDecimal(7);
                 pData.total = reader.GetDecimal(8);
                 pData.status = reader.GetInt32(9);
