@@ -18,7 +18,8 @@ namespace Mi_Negocio.Cotizaciones
 
         private void frmCotizaciones_Load(object sender, EventArgs e)
         {
-
+            dateFinal.Text = (DateTime.Now.AddDays(1)).ToString();
+            floadFacturas();            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -111,7 +112,7 @@ namespace Mi_Negocio.Cotizaciones
             string searchDate = " AND fecha BETWEEN '" + Convert.ToDateTime(dateInicio.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(dateFinal.Text).ToString("yyyy-MM-dd") + "' ";
             dataFacturas.AutoGenerateColumns = false;
             dataFacturas.DataSource = CotizacionDal.buscar(txtSearch.Text, searchDate );
-            foreach (DataGridViewRow row in dataFacturas.Rows)
+            /*foreach (DataGridViewRow row in dataFacturas.Rows)
             {
                 switch (Convert.ToInt32(row.Cells["timbrado"].Value))
                 {
@@ -121,7 +122,7 @@ namespace Mi_Negocio.Cotizaciones
 
                 }
 
-            }
+            }*/
 
             //this.datagridview1.selectedrows[0].cells[0].selected = false;
             //dataFacturas.SelectedRows[0].Cells[0].Selected = false;
@@ -130,6 +131,7 @@ namespace Mi_Negocio.Cotizaciones
         private void btnNuevaFactura_Click(object sender, EventArgs e)
         {
             frmDetalle det = new frmDetalle();
+            det.id_cotizacion = 0;
             if (det.ShowDialog() != DialogResult.OK) //se coloca OK solo para que siempre se ejecute, por que el formulario no regresa nada
             {
                 floadFacturas();

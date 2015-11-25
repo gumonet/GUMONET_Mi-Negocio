@@ -11,25 +11,17 @@ namespace Mi_Negocio.Cotizaciones
     {
 
 
-        public static int agregar(Cotizacion pData)
+        public static Int64 agregar(Cotizacion pData)
         {
-            int retorno = 0;
+            Int64 retorno = 0;
             MySqlConnection conexion = Connection.ObtenerConexion();
-            string squery = string.Format("INSERT INTO cotizaciones( folio, id_cliente, fecha, condicion_pago, plazo_entrega, cond_embarque, atn, subtotal, iva, total, status ) "
-            + " VALUES ('{0}' ,'{1}' ,'{2}' ,'{3}' ,'{4}' ,'{5}' ,'{6}' ,'{7}' ,'{8}' ,'{9}' ,'{10}')",
-                pData.folio
-                , pData.id_cliente
-                , pData.fecha
-                , pData.condicion_pago
-                , pData.plazo_entrega
-                , pData.cond_embarque
-                , pData.atn
-                , pData.subtotal
-                , pData.iva
-                , pData.total
-                , pData.status
+            string squery = string.Format("INSERT INTO cotizaciones( folio, fecha, condicion_pago, plazo_entrega, cond_embarque, subtotal, iva, total, status, forma_pago, metodo_pago, ieps) "
+            + " VALUES ('{0}' ,now(),'{1}' ,'{2}','{3}' ,'{4}' ,'{5}' ,'{6}' ,'{7}' ,'{8}' ,'{9}' ,'{10}' )",
+                pData.folio,  pData.condicion_pago, pData.plazo_entrega, pData.cond_embarque, pData.subtotal, pData.iva, pData.total, pData.status, pData.forma_pago, pData.metodo_pago, pData.ieps
            );
             MySqlCommand cmd = new MySqlCommand(squery, conexion);
+            cmd.ExecuteNonQuery();
+            retorno = cmd.LastInsertedId;
             conexion.Close();
             return retorno;
         }
@@ -38,7 +30,7 @@ namespace Mi_Negocio.Cotizaciones
             List<Cotizacion> _lista = new List<Cotizacion>();
             MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(String.Format(
-                "SELECT vc.id_cotizacion, vc.cliente, vc.folio, vc.fecha, vc.str_status, vc.iva, vc.ieps, vc.subtotal, vc.total FROM v_cotizaciones vc where campo_buscar like '%{0}%' {1} ", pSearch, date), conexion);
+                "SELECT vc.id_cotizacion, vc.cliente, vc.folio, vc.fecha, vc.str_status, vc.iva, vc.ieps, vc.subtotal, vc.total FROM v_cotizaciones vc where cliente like '%{0}%' {1} ", pSearch, date), conexion);
 
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -80,7 +72,6 @@ namespace Mi_Negocio.Cotizaciones
                 pData.condicion_pago = reader.GetString(4);
                 pData.plazo_entrega = reader.GetString(5);
                 pData.cond_embarque = reader.GetString(6);
-                pData.atn = reader.GetString(7);
                 pData.subtotal = reader.GetDecimal(8);
                 pData.iva = reader.GetDecimal(9);
                 pData.total = reader.GetDecimal(10);
@@ -103,7 +94,6 @@ namespace Mi_Negocio.Cotizaciones
                 , pData.condicion_pago
                 , pData.plazo_entrega
                 , pData.cond_embarque
-                , pData.atn
                 , pData.subtotal
                 , pData.iva
                 , pData.total

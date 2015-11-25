@@ -33,7 +33,7 @@ namespace Mi_Negocio.Cotizaciones
             List<Cotizacion> _lista = new List<Cotizacion>();
             MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(String.Format(
-                "SELECT id_cotizacion, folio, id_cliente, fecha, condicion_pago, plazo_entrega, cond_embarque, atn, subtotal, iva, total, status from v_cotizaciones where campo_buscar like '%{0}%' {1} ", pSearch, date), conexion);
+                "SELECT id_cotizacion, folio, id_cliente, fecha, condicion_pago, plazo_entrega, cond_embarque, 'atn', subtotal, iva, total, status from v_cotizaciones where campo_buscar like '%{0}%' {1} ", pSearch, date), conexion);
 
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -46,7 +46,6 @@ namespace Mi_Negocio.Cotizaciones
                 pData.condicion_pago = reader.GetString(4);
                 pData.plazo_entrega = reader.GetString(5);
                 pData.cond_embarque = reader.GetString(6);
-                pData.atn = reader.GetString(7);
                 pData.subtotal = reader.GetDecimal(8);
                 pData.iva = reader.GetDecimal(9);
                 pData.total = reader.GetDecimal(10);
@@ -78,7 +77,6 @@ namespace Mi_Negocio.Cotizaciones
                 pData.condicion_pago = reader.GetString(4);
                 pData.plazo_entrega = reader.GetString(5);
                 pData.cond_embarque = reader.GetString(6);
-                pData.atn = reader.GetString(7);
                 pData.subtotal = reader.GetDecimal(8);
                 pData.iva = reader.GetDecimal(9);
                 pData.total = reader.GetDecimal(10);
@@ -101,7 +99,6 @@ namespace Mi_Negocio.Cotizaciones
                 , pData.condicion_pago
                 , pData.plazo_entrega
                 , pData.cond_embarque
-                , pData.atn
                 , pData.subtotal
                 , pData.iva
                 , pData.total

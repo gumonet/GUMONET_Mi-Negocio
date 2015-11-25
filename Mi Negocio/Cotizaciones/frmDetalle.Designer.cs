@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -58,6 +58,8 @@
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -325,21 +327,40 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.textBox12);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.textBox10);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.textBox11);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Location = new System.Drawing.Point(729, 427);
+            this.groupBox3.Location = new System.Drawing.Point(729, 463);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(166, 100);
+            this.groupBox3.Size = new System.Drawing.Size(166, 119);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(66, 65);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(91, 20);
+            this.textBox3.TabIndex = 14;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(38, 69);
+            this.label21.Name = "label21";
+            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label21.Size = new System.Drawing.Size(22, 13);
+            this.label21.TabIndex = 13;
+            this.label21.Text = "Iva";
+            // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(65, 65);
+            this.textBox12.Location = new System.Drawing.Point(67, 91);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(91, 20);
             this.textBox12.TabIndex = 12;
@@ -347,7 +368,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 68);
+            this.label14.Location = new System.Drawing.Point(31, 94);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label14.Size = new System.Drawing.Size(31, 13);
@@ -411,9 +432,9 @@
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.textBox15);
-            this.groupBox4.Location = new System.Drawing.Point(11, 427);
+            this.groupBox4.Location = new System.Drawing.Point(11, 463);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(282, 100);
+            this.groupBox4.Size = new System.Drawing.Size(282, 119);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             // 
@@ -502,7 +523,7 @@
             this.dataDetail.ReadOnly = true;
             this.dataDetail.RowHeadersVisible = false;
             this.dataDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataDetail.Size = new System.Drawing.Size(884, 146);
+            this.dataDetail.Size = new System.Drawing.Size(884, 178);
             this.dataDetail.TabIndex = 17;
             // 
             // id_detalle
@@ -524,8 +545,8 @@
             // concepto
             // 
             this.concepto.DataPropertyName = "concepto";
-            dataGridViewCellStyle1.NullValue = null;
-            this.concepto.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.NullValue = null;
+            this.concepto.DefaultCellStyle = dataGridViewCellStyle8;
             this.concepto.HeaderText = "Descripción";
             this.concepto.Name = "concepto";
             this.concepto.ReadOnly = true;
@@ -542,8 +563,8 @@
             // UNIDAD
             // 
             this.UNIDAD.DataPropertyName = "unidad";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.UNIDAD.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.UNIDAD.DefaultCellStyle = dataGridViewCellStyle9;
             this.UNIDAD.HeaderText = "Unidad";
             this.UNIDAD.Name = "UNIDAD";
             this.UNIDAD.ReadOnly = true;
@@ -551,9 +572,9 @@
             // precio
             // 
             this.precio.DataPropertyName = "precio";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "$###,##0.##";
-            this.precio.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "$###,##0.##";
+            this.precio.DefaultCellStyle = dataGridViewCellStyle10;
             this.precio.HeaderText = "P. Unitario";
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
@@ -562,9 +583,9 @@
             // v_importe
             // 
             this.v_importe.DataPropertyName = "v_importe";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "$###,##0.##";
-            this.v_importe.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "$###,##0.##";
+            this.v_importe.DefaultCellStyle = dataGridViewCellStyle11;
             this.v_importe.HeaderText = "Importe";
             this.v_importe.Name = "v_importe";
             this.v_importe.ReadOnly = true;
@@ -573,10 +594,10 @@
             // importe_iva
             // 
             this.importe_iva.DataPropertyName = "importe_iva";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "$###,##0.##";
-            dataGridViewCellStyle5.NullValue = null;
-            this.importe_iva.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "$###,##0.##";
+            dataGridViewCellStyle12.NullValue = null;
+            this.importe_iva.DefaultCellStyle = dataGridViewCellStyle12;
             this.importe_iva.HeaderText = "IVA";
             this.importe_iva.Name = "importe_iva";
             this.importe_iva.ReadOnly = true;
@@ -587,9 +608,9 @@
             // importe_ieps
             // 
             this.importe_ieps.DataPropertyName = "importe_ieps";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "$###,##0.##";
-            this.importe_ieps.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "$###,##0.##";
+            this.importe_ieps.DefaultCellStyle = dataGridViewCellStyle13;
             this.importe_ieps.HeaderText = "IEPS";
             this.importe_ieps.Name = "importe_ieps";
             this.importe_ieps.ReadOnly = true;
@@ -600,9 +621,9 @@
             // v_total
             // 
             this.v_total.DataPropertyName = "v_total";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "$###,##0.##";
-            this.v_total.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "$###,##0.##";
+            this.v_total.DefaultCellStyle = dataGridViewCellStyle14;
             this.v_total.HeaderText = "TOTAL";
             this.v_total.Name = "v_total";
             this.v_total.ReadOnly = true;
@@ -838,7 +859,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 536);
+            this.ClientSize = new System.Drawing.Size(908, 587);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.dataDetail);
@@ -946,5 +967,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label21;
     }
 }

@@ -14,11 +14,13 @@ namespace Mi_Negocio.Cotizaciones
         public String condicion_pago { get; set; }
         public String plazo_entrega { get; set; }
         public String cond_embarque { get; set; }
-        public String atn { get; set; }
         public decimal subtotal { get; set; }
         public decimal iva { get; set; }
         public decimal total { get; set; }
         public int status { get; set; }
+        public String forma_pago { get; set; }
+        public String metodo_pago { get; set; }
+        public decimal ieps { get; set; }
 
         /*Custom fields*/
         public string cliente { get; set; }
@@ -28,7 +30,7 @@ namespace Mi_Negocio.Cotizaciones
         {
 
         }
-        public Cotizacion(int id_cotizacion, String folio, int id_cliente, DateTime fecha, String condicion_pago, String plazo_entrega, String cond_embarque, String atn, decimal subtotal, decimal iva, decimal total, int status)
+        public Cotizacion(int id_cotizacion, String folio, int id_cliente, DateTime fecha, String condicion_pago, String plazo_entrega, String cond_embarque, decimal subtotal, decimal iva, decimal total, int status, String forma_pago, String metodo_pago, Decimal ieps)
         {
             this.id_cotizacion = id_cotizacion;
             this.folio = folio;
@@ -37,11 +39,13 @@ namespace Mi_Negocio.Cotizaciones
             this.condicion_pago = condicion_pago;
             this.plazo_entrega = plazo_entrega;
             this.cond_embarque = cond_embarque;
-            this.atn = atn;
             this.subtotal = subtotal;
             this.iva = iva;
             this.total = total;
             this.status = status;
+            this.forma_pago = forma_pago;
+            this.metodo_pago = metodo_pago;
+            this.ieps = ieps;
         }
     }
 }
