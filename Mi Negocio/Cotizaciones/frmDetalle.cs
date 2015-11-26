@@ -80,18 +80,23 @@ namespace Mi_Negocio.Cotizaciones
         private void createNew()
         {
             //Obtiene los datos para una nueva cotización.
-            Cotizacion pData = new Cotizacion();
-            pData.folio = "";
-            pData.condicion_pago = "";
-            pData.plazo_entrega = "";
-            pData.cond_embarque = "";
-            pData.subtotal = 0.00m;
-            pData.iva = 0.00m;
+            Mi_Negocio.Ventas.Venta pData = new Mi_Negocio.Ventas.Venta();
+            
+            pData.folio_cotizacion = "";
+            pData.importe_sub  = 0.00m;
+            pData.iva_tras = 0.00m;
+            pData.ieps = 0.00m;
             pData.total = 0.00m;
-            pData.status = 0;
-            pData.forma_pago ="";
             pData.metodo_pago = "";
-            pData.ieps = 0;
+            pData.status = 0;
+            pData.forma_pago = "";
+            pData.condicion_pago="";
+            pData.condicion_embarque = "";
+            pData.plazo_entrega = "";
+            pData.tipo=0;
+            pData.num_cta="";
+            pData.importe_desc = 0.00m;
+            pData.facturado = 0;
 
             this.id_cotizacion = CotizacionDal.agregar(pData);
 

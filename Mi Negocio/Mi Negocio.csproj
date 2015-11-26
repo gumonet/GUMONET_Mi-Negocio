@@ -106,10 +106,7 @@
     <Compile Include="Contabilidad\MovimientoListaForm.Designer.cs">
       <DependentUpon>MovimientoListaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cotizaciones\Cotizacion.cs" />
     <Compile Include="Cotizaciones\CotizacionDal.cs" />
-    <Compile Include="Cotizaciones\Detalle.cs" />
-    <Compile Include="Cotizaciones\DetalleDal.cs" />
     <Compile Include="Cotizaciones\frmDetalle.cs">
       <SubType>Form</SubType>
     </Compile>

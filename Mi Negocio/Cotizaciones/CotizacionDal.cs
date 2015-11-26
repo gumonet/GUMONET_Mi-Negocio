@@ -1,4 +1,5 @@
 ﻿using Mi_Negocio.Datasource;
+using Mi_Negocio.Ventas;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -11,13 +12,27 @@ namespace Mi_Negocio.Cotizaciones
     {
 
 
-        public static Int64 agregar(Cotizacion pData)
+        public static Int64 agregar(Venta pData)
         {
             Int64 retorno = 0;
             MySqlConnection conexion = Connection.ObtenerConexion();
-            string squery = string.Format("INSERT INTO cotizaciones( folio, fecha, condicion_pago, plazo_entrega, cond_embarque, subtotal, iva, total, status, forma_pago, metodo_pago, ieps) "
-            + " VALUES ('{0}' ,now(),'{1}' ,'{2}','{3}' ,'{4}' ,'{5}' ,'{6}' ,'{7}' ,'{8}' ,'{9}' ,'{10}' )",
-                pData.folio,  pData.condicion_pago, pData.plazo_entrega, pData.cond_embarque, pData.subtotal, pData.iva, pData.total, pData.status, pData.forma_pago, pData.metodo_pago, pData.ieps
+            string squery = string.Format("INSERT INTO cotizaciones( folio_cotizacion ,fecha_cotizacion ,importe_sub ,iva_tras ,ieps ,total ,metodo_pago ,status ,forma_pago ,condicion_pago ,condicion_embarque ,plazo_entrega ,tipo ,num_cta ,importe_desc ,facturado ) "
+            + " VALUES ('{0}' ,now(),'{1}' ,'{2}','{3}' ,'{4}' ,'{5}' ,'{6}' ,'{7}' ,'{8}' ,'{9}' ,'{10}', '{11}', '{12}', '{13}', '{14}' )",
+                pData.folio_cotizacion,
+                pData.importe_sub,
+                pData.iva_tras,
+                pData.ieps,
+                pData.total,
+                pData.metodo_pago,
+                pData.status,
+                pData.forma_pago,
+                pData.condicion_pago,
+                pData.condicion_embarque,
+                pData.plazo_entrega,
+                pData.tipo,
+                pData.num_cta,
+                pData.importe_desc,
+                pData.facturado
            );
             MySqlCommand cmd = new MySqlCommand(squery, conexion);
             cmd.ExecuteNonQuery();
