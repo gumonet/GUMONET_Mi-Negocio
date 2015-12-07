@@ -8,22 +8,6 @@ C:\RECURSOS\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
 C:\RECURSOS\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Form1.resources
 B:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
 B:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.exe
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.pdb
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csprojResolveAssemblyReference.cache
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Form1.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Properties.Resources.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csproj.GenerateResource.Cache
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmClientes.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmListClientes.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Cotizaciones.frmCotizaciones.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Cotizaciones.frmDetalle.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.CategoriaForm.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.frmContabilidad.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.CuentaForm.resources
-D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.MovimientoForm.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.exe
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.pdb
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmClientes.resources
@@ -41,3 +25,19 @@ F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csp
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csprojResolveAssemblyReference.cache
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.exe
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.pdb
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmClientes.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmListClientes.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.CategoriaForm.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.CuentaForm.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.frmContabilidad.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.MovimientoForm.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.MovimientoListaForm.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Cotizaciones.frmDetalle.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Cotizaciones.frmCotizaciones.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Form1.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Properties.Resources.resources
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csproj.GenerateResource.Cache
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
+D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb

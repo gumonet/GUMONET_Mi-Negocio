@@ -80,9 +80,9 @@ namespace Mi_Negocio.Cotizaciones
         private void createNew()
         {
             //Obtiene los datos para una nueva cotización.
-            Mi_Negocio.Ventas.Venta pData = new Mi_Negocio.Ventas.Venta();
+            Cotizacion pData = new Cotizacion();
             
-            pData.folio_cotizacion = "";
+            pData.folio = "";
             pData.importe_sub  = 0.00m;
             pData.iva_tras = 0.00m;
             pData.ieps = 0.00m;
@@ -94,10 +94,8 @@ namespace Mi_Negocio.Cotizaciones
             pData.condicion_embarque = "";
             pData.plazo_entrega = "";
             pData.tipo=0;
-            pData.num_cta="";
-            pData.importe_desc = 0.00m;
-            pData.facturado = 0;
-
+            pData.importe_desc = 0.00m;            
+                
             this.id_cotizacion = CotizacionDal.agregar(pData);
 
 

@@ -19,12 +19,12 @@ namespace Mi_Negocio.Cotizaciones
         private void frmCotizaciones_Load(object sender, EventArgs e)
         {
             dateFinal.Text = (DateTime.Now.AddDays(1)).ToString();
-            floadFacturas();            
+            floadCotizaciones();            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            floadFacturas();
+            floadCotizaciones();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace Mi_Negocio.Cotizaciones
         }
 
 
-        private void dataFacturas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataCotizaciones_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             fAbrirFactura();
         }
@@ -46,27 +46,27 @@ namespace Mi_Negocio.Cotizaciones
 
         private void fAbrirFactura()
         {
-           Int64 id_cotizacion = Convert.ToInt64(dataFacturas["id_cotizacion", dataFacturas.CurrentCell.RowIndex].Value);
+           Int64 id_cotizacion = Convert.ToInt64(dataCotizaciones["id_cotizacion", dataCotizaciones.CurrentCell.RowIndex].Value);
             frmDetalle det = new frmDetalle();
             det.id_cotizacion = id_cotizacion;
             if (det.ShowDialog() != DialogResult.OK) //se coloca OK solo para que siempre se ejecute, por que el formulario no regresa nada
             {
-                floadFacturas();
+                floadCotizaciones();
             }
 
         }
         private void fDeleteFactura()
         {
-            int status_factura = Convert.ToInt32(dataFacturas["timbrado", dataFacturas.CurrentCell.RowIndex].Value.ToString());
+            int status_factura = Convert.ToInt32(dataCotizaciones["timbrado", dataCotizaciones.CurrentCell.RowIndex].Value.ToString());
             if (status_factura == 1)
             {
-                Int64 id_cotizacion = Convert.ToInt64(dataFacturas["id_cotizacion", dataFacturas.CurrentCell.RowIndex].Value);
+                Int64 id_cotizacion = Convert.ToInt64(dataCotizaciones["id_cotizacion", dataCotizaciones.CurrentCell.RowIndex].Value);
                 if (MessageBox.Show("¿Esta seguro de Eliminar la Factura?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                 {
                     if (CotizacionDal.eliminar(id_cotizacion) > 0)
                     {
                         MessageBox.Show("La Factura Fue Eliminada con Exito", "Factura Eliminada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        floadFacturas();
+                        floadCotizaciones();
                     }
                 }
             }
@@ -83,7 +83,7 @@ namespace Mi_Negocio.Cotizaciones
             det.id_cotizacion = this.empresa_actual;
             if (det.ShowDialog() != DialogResult.OK) //se coloca OK solo para que siempre se ejecute, por que el formulario no regresa nada
             {
-                floadFacturas();
+                floadCotizaciones();
             }
 
         }*/
@@ -107,12 +107,12 @@ namespace Mi_Negocio.Cotizaciones
             fDeleteFactura();
         }
 
-        private void floadFacturas()
+        private void floadCotizaciones()
         {
             string searchDate = " AND fecha BETWEEN '" + Convert.ToDateTime(dateInicio.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(dateFinal.Text).ToString("yyyy-MM-dd") + "' ";
-            dataFacturas.AutoGenerateColumns = false;
-            dataFacturas.DataSource = CotizacionDal.buscar(txtSearch.Text, searchDate );
-            /*foreach (DataGridViewRow row in dataFacturas.Rows)
+            dataCotizaciones.AutoGenerateColumns = false;
+            dataCotizaciones.DataSource = CotizacionDal.buscar(txtSearch.Text, searchDate );
+            /*foreach (DataGridViewRow row in dataCotizaciones.Rows)
             {
                 switch (Convert.ToInt32(row.Cells["timbrado"].Value))
                 {
@@ -125,7 +125,7 @@ namespace Mi_Negocio.Cotizaciones
             }*/
 
             //this.datagridview1.selectedrows[0].cells[0].selected = false;
-            //dataFacturas.SelectedRows[0].Cells[0].Selected = false;
+            //dataCotizaciones.SelectedRows[0].Cells[0].Selected = false;
         }
 
         private void btnNuevaFactura_Click(object sender, EventArgs e)
@@ -134,21 +134,21 @@ namespace Mi_Negocio.Cotizaciones
             det.id_cotizacion = 0;
             if (det.ShowDialog() != DialogResult.OK) //se coloca OK solo para que siempre se ejecute, por que el formulario no regresa nada
             {
-                floadFacturas();
+                floadCotizaciones();
             }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {/*
-            if (dataFacturas.RowCount > 0)
+            if (dataCotizaciones.RowCount > 0)
             {
-                if (Convert.ToInt32(dataFacturas["timbrado", dataFacturas.CurrentCell.RowIndex].Value.ToString()) == 2)
+                if (Convert.ToInt32(dataCotizaciones["timbrado", dataCotizaciones.CurrentCell.RowIndex].Value.ToString()) == 2)
                 {
                     factura_cfdi cfdi = new factura_cfdi();
-                    string serie_folio = dataFacturas["folio", dataFacturas.CurrentCell.RowIndex].Value.ToString();
+                    string serie_folio = dataCotizaciones["folio", dataCotizaciones.CurrentCell.RowIndex].Value.ToString();
                     try
                     {
-                        cfdi.showPDF(@"C:\gumonet-factura\Archivos\" + this.empresa_actual + @"\facturas\" + serie_folio + ".pdf");
+                        cfdi.showPDF(@"C:\gumonet-factura\Archivos\" + this.empresa_actual + @"\Cotizaciones\" + serie_folio + ".pdf");
                     }
                     catch (Exception ex)
                     {
@@ -163,18 +163,18 @@ namespace Mi_Negocio.Cotizaciones
             }
             else
             {
-                MessageBox.Show("No existen facturas para imprimir", "¡ Alerta !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No existen Cotizaciones para imprimir", "¡ Alerta !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }*/
         }
         
         private void btnEnviar_Click(object sender, EventArgs e)
         {/*
-            if (dataFacturas.RowCount > 0)
+            if (dataCotizaciones.RowCount > 0)
             {
-                if (Convert.ToInt32(dataFacturas["timbrado", dataFacturas.CurrentCell.RowIndex].Value.ToString()) == 2)
+                if (Convert.ToInt32(dataCotizaciones["timbrado", dataCotizaciones.CurrentCell.RowIndex].Value.ToString()) == 2)
                 {
-                    string serie_folio = dataFacturas["folio", dataFacturas.CurrentCell.RowIndex].Value.ToString();
-                    string email = dataFacturas["email", dataFacturas.CurrentCell.RowIndex].Value.ToString();
+                    string serie_folio = dataCotizaciones["folio", dataCotizaciones.CurrentCell.RowIndex].Value.ToString();
+                    string email = dataCotizaciones["email", dataCotizaciones.CurrentCell.RowIndex].Value.ToString();
                     if (EnviarMail.sendMail(this.empresa_actual, this.empresaActual.rfc, serie_folio, email))
                     {
                         MessageBox.Show("Factura Enviada Correctamente a: " + email, "Factura Enviada");
@@ -192,7 +192,7 @@ namespace Mi_Negocio.Cotizaciones
             }
             else
             {
-                MessageBox.Show("No existen facturas para enviar", "¡ Alerta !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No existen Cotizaciones para enviar", "¡ Alerta !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
 */

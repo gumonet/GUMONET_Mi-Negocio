@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cotizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +40,7 @@
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataFacturas = new System.Windows.Forms.DataGridView();
+            this.dataCotizaciones = new System.Windows.Forms.DataGridView();
             this.id_factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +63,7 @@
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataFacturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCotizaciones)).BeginInit();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -128,14 +128,14 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // dataFacturas
+            // dataCotizaciones
             // 
-            this.dataFacturas.AllowUserToAddRows = false;
-            this.dataFacturas.AllowUserToDeleteRows = false;
-            this.dataFacturas.AllowUserToResizeColumns = false;
-            this.dataFacturas.AllowUserToResizeRows = false;
-            this.dataFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataCotizaciones.AllowUserToAddRows = false;
+            this.dataCotizaciones.AllowUserToDeleteRows = false;
+            this.dataCotizaciones.AllowUserToResizeColumns = false;
+            this.dataCotizaciones.AllowUserToResizeRows = false;
+            this.dataCotizaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCotizaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_factura,
             this.email,
             this.FECHA,
@@ -145,16 +145,16 @@
             this.importe_total,
             this.FOLIO,
             this.timbrado});
-            this.dataFacturas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataFacturas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataFacturas.Location = new System.Drawing.Point(12, 79);
-            this.dataFacturas.MultiSelect = false;
-            this.dataFacturas.Name = "dataFacturas";
-            this.dataFacturas.ReadOnly = true;
-            this.dataFacturas.RowHeadersVisible = false;
-            this.dataFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataFacturas.Size = new System.Drawing.Size(1063, 337);
-            this.dataFacturas.TabIndex = 6;
+            this.dataCotizaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataCotizaciones.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataCotizaciones.Location = new System.Drawing.Point(12, 79);
+            this.dataCotizaciones.MultiSelect = false;
+            this.dataCotizaciones.Name = "dataCotizaciones";
+            this.dataCotizaciones.ReadOnly = true;
+            this.dataCotizaciones.RowHeadersVisible = false;
+            this.dataCotizaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataCotizaciones.Size = new System.Drawing.Size(1063, 337);
+            this.dataCotizaciones.TabIndex = 6;
             // 
             // id_factura
             // 
@@ -199,9 +199,9 @@
             // importe_subtotal
             // 
             this.importe_subtotal.DataPropertyName = "importe_subtotal";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle22.Format = "$###,##0.##";
-            this.importe_subtotal.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "$###,##0.##";
+            this.importe_subtotal.DefaultCellStyle = dataGridViewCellStyle1;
             this.importe_subtotal.HeaderText = "SUBTOTAL";
             this.importe_subtotal.Name = "importe_subtotal";
             this.importe_subtotal.ReadOnly = true;
@@ -209,9 +209,9 @@
             // importe_total
             // 
             this.importe_total.DataPropertyName = "importe_total";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle23.Format = "$###,##0.##";
-            this.importe_total.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "$###,##0.##";
+            this.importe_total.DefaultCellStyle = dataGridViewCellStyle2;
             this.importe_total.HeaderText = "TOTAL";
             this.importe_total.Name = "importe_total";
             this.importe_total.ReadOnly = true;
@@ -219,9 +219,9 @@
             // FOLIO
             // 
             this.FOLIO.DataPropertyName = "folio";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle24.NullValue = "$###,##0.##";
-            this.FOLIO.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.NullValue = "$###,##0.##";
+            this.FOLIO.DefaultCellStyle = dataGridViewCellStyle3;
             this.FOLIO.HeaderText = "FOLIO";
             this.FOLIO.Name = "FOLIO";
             this.FOLIO.ReadOnly = true;
@@ -323,7 +323,6 @@
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
-            
             // 
             // btnNuevaFactura
             // 
@@ -349,14 +348,14 @@
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.abrirToolStripMenuItem.Text = "Abrir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItem1.Text = "Eliminar";
             // 
             // frmCotizaciones
@@ -364,7 +363,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1087, 430);
-            this.Controls.Add(this.dataFacturas);
+            this.Controls.Add(this.dataCotizaciones);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -373,7 +372,7 @@
             this.Load += new System.EventHandler(this.frmCotizaciones_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataFacturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCotizaciones)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -392,7 +391,7 @@
         private System.Windows.Forms.ToolStripMenuItem imprimirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataFacturas;
+        private System.Windows.Forms.DataGridView dataCotizaciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_factura;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA;
