@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -58,22 +58,20 @@
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtImpuestos = new System.Windows.Forms.TextBox();
+            this.Impuestos = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtConcicionPago = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtMetodoPago = new System.Windows.Forms.TextBox();
+            this.txtFormaPago = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnConceptoEditar = new System.Windows.Forms.Button();
+            this.btnConceptoCancelar = new System.Windows.Forms.Button();
             this.btnConceptoAdd = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.dataDetail = new System.Windows.Forms.DataGridView();
@@ -89,19 +87,19 @@
             this.v_total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.conceptoSubtotal = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.conceptoCantidad = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtIEPS = new System.Windows.Forms.TextBox();
-            this.txtIva = new System.Windows.Forms.TextBox();
+            this.conceptoTotal = new System.Windows.Forms.TextBox();
+            this.conceptoIeps = new System.Windows.Forms.TextBox();
+            this.conceptoIva = new System.Windows.Forms.TextBox();
             this.nIeps = new System.Windows.Forms.CheckBox();
             this.nIva = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.conceptoCantidad = new System.Windows.Forms.TextBox();
+            this.conceptoPrecio = new System.Windows.Forms.TextBox();
+            this.conceptoUnidad = new System.Windows.Forms.TextBox();
             this.conceptoNombre = new System.Windows.Forms.TextBox();
             this.conceptoCodigo = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -112,6 +110,8 @@
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label18 = new System.Windows.Forms.Label();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -327,12 +327,12 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txtDescuento);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.txtTotal);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.textBox10);
-            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.txtImpuestos);
+            this.groupBox3.Controls.Add(this.Impuestos);
             this.groupBox3.Controls.Add(this.textBox11);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Location = new System.Drawing.Point(729, 463);
@@ -341,29 +341,12 @@
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
-            // textBox3
+            // txtTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(66, 65);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(91, 20);
-            this.textBox3.TabIndex = 14;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(38, 69);
-            this.label21.Name = "label21";
-            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label21.Size = new System.Drawing.Size(22, 13);
-            this.label21.TabIndex = 13;
-            this.label21.Text = "Iva";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(67, 91);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(91, 20);
-            this.textBox12.TabIndex = 12;
+            this.txtTotal.Location = new System.Drawing.Point(67, 91);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(91, 20);
+            this.txtTotal.TabIndex = 12;
             // 
             // label14
             // 
@@ -375,26 +358,26 @@
             this.label14.TabIndex = 11;
             this.label14.Text = "Total";
             // 
-            // textBox10
+            // txtImpuestos
             // 
-            this.textBox10.Location = new System.Drawing.Point(66, 39);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(91, 20);
-            this.textBox10.TabIndex = 10;
+            this.txtImpuestos.Location = new System.Drawing.Point(67, 65);
+            this.txtImpuestos.Name = "txtImpuestos";
+            this.txtImpuestos.Size = new System.Drawing.Size(91, 20);
+            this.txtImpuestos.TabIndex = 10;
             // 
-            // label9
+            // Impuestos
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(38, 43);
-            this.label9.Name = "label9";
-            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(22, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Iva";
+            this.Impuestos.AutoSize = true;
+            this.Impuestos.Location = new System.Drawing.Point(7, 68);
+            this.Impuestos.Name = "Impuestos";
+            this.Impuestos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Impuestos.Size = new System.Drawing.Size(55, 13);
+            this.Impuestos.TabIndex = 9;
+            this.Impuestos.Text = "Impuestos";
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(66, 13);
+            this.textBox11.Location = new System.Drawing.Point(68, 39);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(90, 20);
             this.textBox11.TabIndex = 9;
@@ -402,18 +385,18 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 16);
+            this.label10.Location = new System.Drawing.Point(16, 46);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 13);
             this.label10.TabIndex = 8;
             this.label10.Text = "Subtotal";
             // 
-            // textBox15
+            // txtConcicionPago
             // 
-            this.textBox15.Location = new System.Drawing.Point(105, 13);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(166, 20);
-            this.textBox15.TabIndex = 15;
+            this.txtConcicionPago.Location = new System.Drawing.Point(105, 13);
+            this.txtConcicionPago.Name = "txtConcicionPago";
+            this.txtConcicionPago.Size = new System.Drawing.Size(166, 20);
+            this.txtConcicionPago.TabIndex = 15;
             // 
             // label13
             // 
@@ -427,11 +410,11 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.textBox8);
-            this.groupBox4.Controls.Add(this.textBox14);
+            this.groupBox4.Controls.Add(this.txtMetodoPago);
+            this.groupBox4.Controls.Add(this.txtFormaPago);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.textBox15);
+            this.groupBox4.Controls.Add(this.txtConcicionPago);
             this.groupBox4.Location = new System.Drawing.Point(11, 463);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(282, 119);
@@ -447,19 +430,19 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "Metodo de Pago";
             // 
-            // textBox8
+            // txtMetodoPago
             // 
-            this.textBox8.Location = new System.Drawing.Point(105, 65);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(166, 20);
-            this.textBox8.TabIndex = 18;
+            this.txtMetodoPago.Location = new System.Drawing.Point(105, 65);
+            this.txtMetodoPago.Name = "txtMetodoPago";
+            this.txtMetodoPago.Size = new System.Drawing.Size(166, 20);
+            this.txtMetodoPago.TabIndex = 18;
             // 
-            // textBox14
+            // txtFormaPago
             // 
-            this.textBox14.Location = new System.Drawing.Point(105, 39);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(166, 20);
-            this.textBox14.TabIndex = 17;
+            this.txtFormaPago.Location = new System.Drawing.Point(105, 39);
+            this.txtFormaPago.Name = "txtFormaPago";
+            this.txtFormaPago.Size = new System.Drawing.Size(166, 20);
+            this.txtFormaPago.TabIndex = 17;
             // 
             // label12
             // 
@@ -470,16 +453,16 @@
             this.label12.TabIndex = 16;
             this.label12.Text = "Forma de Pago";
             // 
-            // btnConceptoEditar
+            // btnConceptoCancelar
             // 
-            this.btnConceptoEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConceptoEditar.Location = new System.Drawing.Point(814, 64);
-            this.btnConceptoEditar.Name = "btnConceptoEditar";
-            this.btnConceptoEditar.Size = new System.Drawing.Size(60, 25);
-            this.btnConceptoEditar.TabIndex = 13;
-            this.btnConceptoEditar.Text = "Guardar";
-            this.btnConceptoEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConceptoEditar.UseVisualStyleBackColor = true;
+            this.btnConceptoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConceptoCancelar.Location = new System.Drawing.Point(814, 64);
+            this.btnConceptoCancelar.Name = "btnConceptoCancelar";
+            this.btnConceptoCancelar.Size = new System.Drawing.Size(60, 25);
+            this.btnConceptoCancelar.TabIndex = 13;
+            this.btnConceptoCancelar.Text = "Guardar";
+            this.btnConceptoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConceptoCancelar.UseVisualStyleBackColor = true;
             // 
             // btnConceptoAdd
             // 
@@ -545,8 +528,8 @@
             // concepto
             // 
             this.concepto.DataPropertyName = "concepto";
-            dataGridViewCellStyle8.NullValue = null;
-            this.concepto.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.NullValue = null;
+            this.concepto.DefaultCellStyle = dataGridViewCellStyle1;
             this.concepto.HeaderText = "Descripción";
             this.concepto.Name = "concepto";
             this.concepto.ReadOnly = true;
@@ -563,8 +546,8 @@
             // UNIDAD
             // 
             this.UNIDAD.DataPropertyName = "unidad";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.UNIDAD.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.UNIDAD.DefaultCellStyle = dataGridViewCellStyle2;
             this.UNIDAD.HeaderText = "Unidad";
             this.UNIDAD.Name = "UNIDAD";
             this.UNIDAD.ReadOnly = true;
@@ -572,9 +555,9 @@
             // precio
             // 
             this.precio.DataPropertyName = "precio";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "$###,##0.##";
-            this.precio.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "$###,##0.##";
+            this.precio.DefaultCellStyle = dataGridViewCellStyle3;
             this.precio.HeaderText = "P. Unitario";
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
@@ -583,9 +566,9 @@
             // v_importe
             // 
             this.v_importe.DataPropertyName = "v_importe";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "$###,##0.##";
-            this.v_importe.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "$###,##0.##";
+            this.v_importe.DefaultCellStyle = dataGridViewCellStyle4;
             this.v_importe.HeaderText = "Importe";
             this.v_importe.Name = "v_importe";
             this.v_importe.ReadOnly = true;
@@ -594,10 +577,10 @@
             // importe_iva
             // 
             this.importe_iva.DataPropertyName = "importe_iva";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "$###,##0.##";
-            dataGridViewCellStyle12.NullValue = null;
-            this.importe_iva.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "$###,##0.##";
+            dataGridViewCellStyle5.NullValue = null;
+            this.importe_iva.DefaultCellStyle = dataGridViewCellStyle5;
             this.importe_iva.HeaderText = "IVA";
             this.importe_iva.Name = "importe_iva";
             this.importe_iva.ReadOnly = true;
@@ -608,9 +591,9 @@
             // importe_ieps
             // 
             this.importe_ieps.DataPropertyName = "importe_ieps";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "$###,##0.##";
-            this.importe_ieps.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "$###,##0.##";
+            this.importe_ieps.DefaultCellStyle = dataGridViewCellStyle6;
             this.importe_ieps.HeaderText = "IEPS";
             this.importe_ieps.Name = "importe_ieps";
             this.importe_ieps.ReadOnly = true;
@@ -621,9 +604,9 @@
             // v_total
             // 
             this.v_total.DataPropertyName = "v_total";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Format = "$###,##0.##";
-            this.v_total.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "$###,##0.##";
+            this.v_total.DefaultCellStyle = dataGridViewCellStyle7;
             this.v_total.HeaderText = "TOTAL";
             this.v_total.Name = "v_total";
             this.v_total.ReadOnly = true;
@@ -634,24 +617,24 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Controls.Add(this.textBox5);
+            this.groupBox5.Controls.Add(this.conceptoSubtotal);
             this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Controls.Add(this.textBox4);
+            this.groupBox5.Controls.Add(this.conceptoCantidad);
             this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.textBox2);
-            this.groupBox5.Controls.Add(this.txtIEPS);
-            this.groupBox5.Controls.Add(this.txtIva);
+            this.groupBox5.Controls.Add(this.conceptoTotal);
+            this.groupBox5.Controls.Add(this.conceptoIeps);
+            this.groupBox5.Controls.Add(this.conceptoIva);
             this.groupBox5.Controls.Add(this.nIeps);
             this.groupBox5.Controls.Add(this.nIva);
             this.groupBox5.Controls.Add(this.label20);
             this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Controls.Add(this.conceptoCantidad);
+            this.groupBox5.Controls.Add(this.conceptoPrecio);
+            this.groupBox5.Controls.Add(this.conceptoUnidad);
             this.groupBox5.Controls.Add(this.label15);
             this.groupBox5.Controls.Add(this.conceptoNombre);
             this.groupBox5.Controls.Add(this.conceptoCodigo);
             this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.btnConceptoEditar);
+            this.groupBox5.Controls.Add(this.btnConceptoCancelar);
             this.groupBox5.Controls.Add(this.btnConceptoAdd);
             this.groupBox5.Location = new System.Drawing.Point(11, 169);
             this.groupBox5.Name = "groupBox5";
@@ -668,12 +651,12 @@
             this.label24.TabIndex = 34;
             this.label24.Text = "Subtotal";
             // 
-            // textBox5
+            // conceptoSubtotal
             // 
-            this.textBox5.Location = new System.Drawing.Point(811, 28);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(65, 20);
-            this.textBox5.TabIndex = 33;
+            this.conceptoSubtotal.Location = new System.Drawing.Point(811, 28);
+            this.conceptoSubtotal.Name = "conceptoSubtotal";
+            this.conceptoSubtotal.Size = new System.Drawing.Size(65, 20);
+            this.conceptoSubtotal.TabIndex = 33;
             // 
             // label23
             // 
@@ -684,12 +667,12 @@
             this.label23.TabIndex = 32;
             this.label23.Text = "Cantidad";
             // 
-            // textBox4
+            // conceptoCantidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(742, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(65, 20);
-            this.textBox4.TabIndex = 31;
+            this.conceptoCantidad.Location = new System.Drawing.Point(742, 28);
+            this.conceptoCantidad.Name = "conceptoCantidad";
+            this.conceptoCantidad.Size = new System.Drawing.Size(65, 20);
+            this.conceptoCantidad.TabIndex = 31;
             // 
             // label22
             // 
@@ -700,30 +683,30 @@
             this.label22.TabIndex = 29;
             this.label22.Text = "Total";
             // 
-            // textBox2
+            // conceptoTotal
             // 
-            this.textBox2.Location = new System.Drawing.Point(664, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(81, 20);
-            this.textBox2.TabIndex = 28;
+            this.conceptoTotal.Location = new System.Drawing.Point(664, 67);
+            this.conceptoTotal.Name = "conceptoTotal";
+            this.conceptoTotal.Size = new System.Drawing.Size(81, 20);
+            this.conceptoTotal.TabIndex = 28;
             // 
-            // txtIEPS
+            // conceptoIeps
             // 
-            this.txtIEPS.Enabled = false;
-            this.txtIEPS.Location = new System.Drawing.Point(614, 67);
-            this.txtIEPS.Name = "txtIEPS";
-            this.txtIEPS.Size = new System.Drawing.Size(44, 20);
-            this.txtIEPS.TabIndex = 26;
-            this.txtIEPS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.conceptoIeps.Enabled = false;
+            this.conceptoIeps.Location = new System.Drawing.Point(614, 67);
+            this.conceptoIeps.Name = "conceptoIeps";
+            this.conceptoIeps.Size = new System.Drawing.Size(44, 20);
+            this.conceptoIeps.TabIndex = 26;
+            this.conceptoIeps.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtIva
+            // conceptoIva
             // 
-            this.txtIva.Enabled = false;
-            this.txtIva.Location = new System.Drawing.Point(511, 67);
-            this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(47, 20);
-            this.txtIva.TabIndex = 25;
-            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.conceptoIva.Enabled = false;
+            this.conceptoIva.Location = new System.Drawing.Point(511, 67);
+            this.conceptoIva.Name = "conceptoIva";
+            this.conceptoIva.Size = new System.Drawing.Size(47, 20);
+            this.conceptoIva.TabIndex = 25;
+            this.conceptoIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // nIeps
             // 
@@ -763,19 +746,19 @@
             this.label19.TabIndex = 21;
             this.label19.Text = "Precio";
             // 
-            // textBox1
+            // conceptoPrecio
             // 
-            this.textBox1.Location = new System.Drawing.Point(674, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 20);
-            this.textBox1.TabIndex = 20;
+            this.conceptoPrecio.Location = new System.Drawing.Point(674, 28);
+            this.conceptoPrecio.Name = "conceptoPrecio";
+            this.conceptoPrecio.Size = new System.Drawing.Size(65, 20);
+            this.conceptoPrecio.TabIndex = 20;
             // 
-            // conceptoCantidad
+            // conceptoUnidad
             // 
-            this.conceptoCantidad.Location = new System.Drawing.Point(588, 28);
-            this.conceptoCantidad.Name = "conceptoCantidad";
-            this.conceptoCantidad.Size = new System.Drawing.Size(81, 20);
-            this.conceptoCantidad.TabIndex = 19;
+            this.conceptoUnidad.Location = new System.Drawing.Point(588, 28);
+            this.conceptoUnidad.Name = "conceptoUnidad";
+            this.conceptoUnidad.Size = new System.Drawing.Size(81, 20);
+            this.conceptoUnidad.TabIndex = 19;
             // 
             // conceptoNombre
             // 
@@ -855,6 +838,23 @@
             this.label18.TabIndex = 20;
             this.label18.Text = "C   O   N   C   E   P   T   O   S";
             // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Location = new System.Drawing.Point(67, 13);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(91, 20);
+            this.txtDescuento.TabIndex = 16;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 20);
+            this.label21.Name = "label21";
+            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label21.Size = new System.Drawing.Size(59, 13);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Descuento";
+            // 
             // frmDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -912,21 +912,21 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtImpuestos;
+        private System.Windows.Forms.Label Impuestos;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtConcicionPago;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtMetodoPago;
+        private System.Windows.Forms.TextBox txtFormaPago;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnConceptoEditar;
+        private System.Windows.Forms.Button btnConceptoCancelar;
         private System.Windows.Forms.Button btnConceptoAdd;
         private System.Windows.Forms.DataGridView dataDetail;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_detalle;
@@ -943,7 +943,7 @@
         private System.Windows.Forms.TextBox conceptoNombre;
         private System.Windows.Forms.TextBox conceptoCodigo;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox conceptoCantidad;
+        private System.Windows.Forms.TextBox conceptoUnidad;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -954,20 +954,20 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateFecha;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox conceptoSubtotal;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox conceptoCantidad;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox txtIEPS;
-        private System.Windows.Forms.TextBox txtIva;
+        private System.Windows.Forms.TextBox conceptoTotal;
+        private System.Windows.Forms.TextBox conceptoIeps;
+        private System.Windows.Forms.TextBox conceptoIva;
         private System.Windows.Forms.CheckBox nIeps;
         private System.Windows.Forms.CheckBox nIva;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox conceptoPrecio;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label21;
     }
 }

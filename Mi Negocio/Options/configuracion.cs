@@ -7,8 +7,6 @@ namespace Mi_Negocio.Options
 {
     class Configuracion
     {
-         class Configuracion
-    {
         public int id_cfg { set; get; }
         public string regimen { set; get; }
         public string nombre { set; get; }

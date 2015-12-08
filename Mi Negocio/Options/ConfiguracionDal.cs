@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Mi_Negocio.Datasource;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Mi_Negocio.Options
         public static int Agregar(Configuracion pData)
         {
             int retorno = 0;
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
 
             MySqlCommand cmd = new MySqlCommand(string.Format(
            "INSERT INTO cfg (regimen ,nombre ,rfc ,calle ,n_ext ,n_int ,colonia ,cp ,localidad ,municipio ,estado ,telefono ,email ,iva ,ieps ,ret_iva ,ret_isr ,lugar_expedicion ,serie ,folio_actual , folio_final, cadena_cer) " +
@@ -49,7 +50,7 @@ namespace Mi_Negocio.Options
         public static List<Configuracion> Buscar()
         {
             List<Configuracion> _lista = new List<Configuracion>();
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(String.Format(
                 "SELECT  id_cfg, nombre,  rfc  FROM cfg"), conexion);
 
@@ -71,7 +72,7 @@ namespace Mi_Negocio.Options
         //Otener cliente para editar
         public static Configuracion Obtener(int pId)
         {
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             Configuracion pData = new Configuracion();
 
             MySqlCommand cmd = new MySqlCommand(String.Format("select regimen ,nombre ,rfc ,calle ,n_ext ,n_int ,colonia ,cp ,localidad ,municipio ,estado ,telefono ,email ,iva ,ieps ,ret_iva ,ret_isr ,lugar_expedicion ,serie ,folio_actual ,folio_final, path_cer, path_key, sello_pass, cadena_cer, num_cer, logo_cuadrado, logo_banner,foto_perfil  FROM cfg where id_cfg = {0} ", pId), conexion);
@@ -118,7 +119,7 @@ namespace Mi_Negocio.Options
         public static int Actualizar(Configuracion pData)
         {
             int retorno = 0;
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
 
             MySqlCommand cmd = new MySqlCommand(string.Format(" UPDATE cfg  " +
             " SET " +
@@ -155,7 +156,7 @@ namespace Mi_Negocio.Options
         public static void setFolio(int id_cfg, int folio)
         {
 
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(string.Format("UPDATE cfg set folio_actual = {0} WHERE  id_cfg = {1} ", folio, id_cfg), conexion);
             cmd.ExecuteNonQuery();
             conexion.Close();
@@ -163,7 +164,7 @@ namespace Mi_Negocio.Options
         public static int setSelloInfo(string certificado, string key, string pass, string cadena, string numero, int id_cfg)
         {
             int retorno = 0;
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(string.Format("UPDATE cfg set path_cer = '{0}', path_key = '{1}', sello_pass = '{2}', cadena_cer = '{3}', num_cer='{4}'  WHERE  id_cfg = {5} ",
                                                                          certificado, key, pass, cadena, numero, id_cfg), conexion);
             retorno = cmd.ExecuteNonQuery();
@@ -175,7 +176,7 @@ namespace Mi_Negocio.Options
         public static int setLogos(string cuadrado, string banner, int tipo, int id_cfg)
         {
             int retorno = 0;
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(string.Format("UPDATE cfg set logo_cuadrado = '{0}', logo_banner = '{1}', foto_perfil = {2} WHERE  id_cfg = {3} ",
                                                                          cuadrado, banner, tipo, id_cfg), conexion);
             retorno = cmd.ExecuteNonQuery();
@@ -188,7 +189,7 @@ namespace Mi_Negocio.Options
         public static void setCertificado(string certificado, int id_cfg)
         {
 
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(string.Format("UPDATE cfg set path_cer = '{0}' WHERE  id_cfg = {1} ", certificado, id_cfg), conexion);
             cmd.ExecuteNonQuery();
             conexion.Close();
@@ -198,7 +199,7 @@ namespace Mi_Negocio.Options
         public static void setKey(string key, int id_cfg)
         {
 
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(string.Format("UPDATE cfg set  path_key = '{0}' WHERE  id_cfg = {1} ", key, id_cfg), conexion);
             cmd.ExecuteNonQuery();
             conexion.Close();
@@ -208,7 +209,7 @@ namespace Mi_Negocio.Options
         public static string getLogoCuadrado(int idEmpresa)
         {
             string resultado = "";
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(string.Format("select logo_cuadrado  from cfg WHERE  id_cfg = {0} ", idEmpresa), conexion);
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -225,7 +226,7 @@ namespace Mi_Negocio.Options
         public static int login(string usuario, string pass)
         {
             int resultado = 0;
-            MySqlConnection conexion = BdComun.ObtenerConexion();
+            MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(string.Format("SELECT 1 as 'usuario' FROM xconfig where usuario = '{0}' and pass = '{1}'", usuario, pass), conexion);
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
