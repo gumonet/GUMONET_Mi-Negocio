@@ -59,6 +59,7 @@ namespace Mi_Negocio.Cotizaciones
             txtRazonSocial.Text = pCliente.nombre;
             txtRfc.Text = pCliente.rfc;
             txtEmail.Text = pCliente.email;
+            txtAtn.Text = pCliente.encargado;
 
         }
 
