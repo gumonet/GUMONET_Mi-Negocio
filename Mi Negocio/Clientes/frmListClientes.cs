@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Mi_Negocio.Clientes
 {
-    public partial class frmListClientes : Form
+    public partial class frmListDepartamentos : Form
     {
-        public frmListClientes()
+        public frmListDepartamentos()
         {
             InitializeComponent();
         }

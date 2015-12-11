@@ -1,6 +1,6 @@
 ﻿namespace Mi_Negocio.Clientes
 {
-    partial class frmListClientes
+    partial class frmListDepartamentos
     {
         /// <summary>
         /// Required designer variable.

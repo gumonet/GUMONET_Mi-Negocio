@@ -1,4 +1,5 @@
-﻿using Mi_Negocio.Clientes;
+﻿using Mi_Negocio.Almacenes;
+using Mi_Negocio.Clientes;
 using Mi_Negocio.Contabilidad;
 using Mi_Negocio.Cotizaciones;
 using Mi_Negocio.Datasource;
@@ -48,6 +49,12 @@ namespace Mi_Negocio
         {
             frmContabilidad fC = new frmContabilidad();
             fC.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmAlmacen al = new frmAlmacen();
+            al.Show();
         }
 
     }

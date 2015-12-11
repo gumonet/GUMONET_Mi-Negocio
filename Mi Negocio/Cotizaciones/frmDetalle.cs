@@ -42,7 +42,7 @@ namespace Mi_Negocio.Cotizaciones
 
         private void txtRfc_DoubleClick(object sender, EventArgs e)
         {
-            frmListClientes listaClientes = new frmListClientes();
+            frmListDepartamentos listaClientes = new frmListDepartamentos();
             if (listaClientes.ShowDialog() == DialogResult.OK)
             {
                 this.idCliente = listaClientes.id_cte;

@@ -48,10 +48,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almacenes\Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacenes\Almacen.Designer.cs">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Almacenes\Categorias\Categoria.cs" />
     <Compile Include="Almacenes\Categorias\CategoriaDal.cs" />
+    <Compile Include="Almacenes\Categorias\frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacenes\Categorias\frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacenes\Categorias\frmListCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacenes\Categorias\frmListCategorias.Designer.cs">
+      <DependentUpon>frmListCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Almacenes\Movimientos\Movimiento.cs" />
     <Compile Include="Almacenes\Movimientos\MovimientoDal.cs" />
+    <Compile Include="Almacenes\Productos\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacenes\Productos\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacenes\Productos\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacenes\Productos\frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Almacenes\Productos\Producto.cs" />
     <Compile Include="Almacenes\Productos\ProductoDal.cs" />
     <Compile Include="Almacenes\Proveedores\Proveedor.cs" />
@@ -140,6 +170,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ventas\Venta.cs" />
     <Compile Include="Ventas\Ventas_Dal.cs" />
+    <EmbeddedResource Include="Almacenes\Almacen.resx">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacenes\Categorias\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacenes\Categorias\frmListCategorias.resx">
+      <DependentUpon>frmListCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacenes\Productos\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacenes\Productos\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>

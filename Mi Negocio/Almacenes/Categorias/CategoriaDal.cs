@@ -15,15 +15,16 @@ namespace Mi_Negocio.Almacenes.Categorias
             MySqlConnection conexion = Connection.ObtenerConexion();
             string squery = string.Format("INSERT INTO alm_categorias( nombre ,descripcion ) VALUES ('{0}','{1}')", pCategoria.nombre, pCategoria.descripcion);
             MySqlCommand cmd = new MySqlCommand(squery, conexion);
+            retorno = cmd.ExecuteNonQuery();
             conexion.Close();
             return retorno;
         }
-        public static List<Categoria> Buscar(string pSearch = " ")
+        public static List<Categoria> buscar(string pSearch = " ")
         {
             List<Categoria> _lista = new List<Categoria>();
             MySqlConnection conexion = Connection.ObtenerConexion();
             MySqlCommand cmd = new MySqlCommand(String.Format(
-                "SELECT id_categoria, nombre ,descripcion FROM v_alm_categorias where campo_buscar like '%{0}%' ", pSearch), conexion);
+                "SELECT id_categoria, nombre ,descripcion FROM alm_categorias where nombre like '%{0}%' ", pSearch), conexion);
 
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())

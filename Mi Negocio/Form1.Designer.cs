@@ -31,6 +31,7 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnCotizaciones = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClientes
@@ -45,7 +46,7 @@
             // 
             // btnCotizaciones
             // 
-            this.btnCotizaciones.Location = new System.Drawing.Point(103, 12);
+            this.btnCotizaciones.Location = new System.Drawing.Point(98, 12);
             this.btnCotizaciones.Name = "btnCotizaciones";
             this.btnCotizaciones.Size = new System.Drawing.Size(75, 23);
             this.btnCotizaciones.TabIndex = 7;
@@ -55,7 +56,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 12);
+            this.button1.Location = new System.Drawing.Point(182, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -63,11 +64,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(263, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Almacén";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 421);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCotizaciones);
             this.Controls.Add(this.btnClientes);
@@ -83,6 +95,7 @@
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnCotizaciones;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

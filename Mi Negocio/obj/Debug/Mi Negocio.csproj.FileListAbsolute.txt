@@ -11,7 +11,6 @@ B:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.exe
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\bin\Debug\Mi Negocio.pdb
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmClientes.resources
-F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmListClientes.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.CategoriaForm.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.CuentaForm.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Contabilidad.frmContabilidad.resources
@@ -42,3 +41,9 @@ D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.csproj.Gener
 D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.exe
 D:\PROYECTOS\NET\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi Negocio.pdb
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Options.frmConfiguracion.resources
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Almacenes.frmAlmacen.resources
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Almacenes.Categorias.frmCategorias.resources
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Almacenes.Productos.frmProducto.resources
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Almacenes.Productos.frmProductos.resources
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Almacenes.Categorias.frmListCategorias.resources
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmListDepartamentos.resources
