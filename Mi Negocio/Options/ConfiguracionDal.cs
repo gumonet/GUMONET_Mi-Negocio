@@ -15,7 +15,7 @@ namespace Mi_Negocio.Options
             MySqlConnection conexion = Connection.ObtenerConexion();
 
             MySqlCommand cmd = new MySqlCommand(string.Format(
-           "INSERT INTO cfg (regimen ,nombre ,rfc ,calle ,n_ext ,n_int ,colonia ,cp ,localidad ,municipio ,estado ,telefono ,email ,iva ,ieps ,ret_iva ,ret_isr ,lugar_expedicion ,serie ,folio_actual , folio_final, cadena_cer) " +
+           "INSERT INTO cfg (regimen, nombre, rfc, calle, n_ext, n_int, colonia, cp, localidad, municipio, estado, telefono, email,  ret_iva, ret_isr, lugar_expedicion, factura_serie, factura_folio, tipo_logo, path_cer, path_key, sello_pass, cadena_cer, num_cer, logo_cuadrado, logo_banner, cot_folio, cot_serie, ventas_folio, ventas_serie, timbre_user, timbre_pass) " +
              "VALUES('{0}'" +
                  ",'{1}'" +
                  ",'{2}'" +
@@ -38,10 +38,50 @@ namespace Mi_Negocio.Options
                  ",'{19}'" +
                  ",'{20}'" +
                  ",'{21}'" +
+                 ",'{22}'" +
+                 ",'{23}'" +
+                 ",'{24}'" +
+                 ",'{25}'" +
+                 ",'{26}'" +
+                 ",'{27}'" +
+                 ",'{28}'" +
+                 ",'{29}'" +
+                 ",'{30}'" +
+                 ",'{31}'" +
                 ")"
                 ,
-           pData.regimen, pData.nombre, pData.rfc, pData.calle, pData.n_ext, pData.n_int, pData.colonia, pData.cp, pData.localidad, pData.municipio, pData.estado, pData.telefono, pData.email, pData.iva, pData.ieps, pData.ret_iva, pData.ret_isr, pData.lugar_expedicion, pData.serie, pData.folio_actual, pData.folio_final, pData.cadena_cer
-                ), conexion);
+pData.regimen,
+pData.nombre,
+pData.rfc,
+pData.calle,
+pData.n_ext,
+pData.n_int,
+pData.colonia,
+pData.cp,
+pData.localidad,
+pData.municipio,
+pData.estado,
+pData.telefono,
+pData.email,
+pData.ret_iva,
+pData.ret_isr,
+pData.lugar_expedicion,
+pData.factura_serie,
+pData.factura_folio,
+pData.tipo_logo,
+pData.path_cer,
+pData.path_key,
+pData.sello_pass,
+pData.cadena_cer,
+pData.num_cer,
+pData.logo_cuadrado,
+pData.logo_banner,
+pData.cot_folio,
+pData.cot_serie,
+pData.ventas_folio,
+pData.timbre_user,
+pData.timbre_pass
+), conexion);
             retorno = cmd.ExecuteNonQuery();
             conexion.Close();
             return retorno;
@@ -69,13 +109,13 @@ namespace Mi_Negocio.Options
             return _lista;
         }
 
-        //Otener cliente para editar
+        //
         public static Configuracion Obtener(int pId)
         {
             MySqlConnection conexion = Connection.ObtenerConexion();
             Configuracion pData = new Configuracion();
 
-            MySqlCommand cmd = new MySqlCommand(String.Format("select regimen ,nombre ,rfc ,calle ,n_ext ,n_int ,colonia ,cp ,localidad ,municipio ,estado ,telefono ,email ,iva ,ieps ,ret_iva ,ret_isr ,lugar_expedicion ,serie ,folio_actual ,folio_final, path_cer, path_key, sello_pass, cadena_cer, num_cer, logo_cuadrado, logo_banner,foto_perfil  FROM cfg where id_cfg = {0} ", pId), conexion);
+            MySqlCommand cmd = new MySqlCommand(String.Format("select regimen, nombre, rfc, calle, n_ext, n_int, colonia, cp, localidad, municipio, estado, telefono, email, ret_iva, ret_isr, lugar_expedicion, factura_serie, factura_folio, tipo_logo, path_cer, path_key, sello_pass, cadena_cer, num_cer, logo_cuadrado, logo_banner, cot_folio, cot_serie, ventas_folio, ventas_serie,timbre_user, timbre_pass FROM cfg_configuracion where id_cfg = {0} ", pId), conexion);
             MySqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -93,22 +133,25 @@ namespace Mi_Negocio.Options
                 pData.estado = reader.GetString(10);
                 pData.telefono = reader.GetString(11);
                 pData.email = reader.GetString(12);
-                pData.iva = reader.GetDecimal(13);
-                pData.ieps = reader.GetDecimal(14);
-                pData.ret_iva = reader.GetDecimal(15);
-                pData.ret_isr = reader.GetDecimal(16);
-                pData.lugar_expedicion = reader.GetString(17);
-                pData.serie = reader.GetString(18);
-                pData.folio_actual = reader.GetInt32(19);
-                pData.folio_final = reader.GetString(20);
-                pData.path_cer = reader.GetString(21);
-                pData.path_key = reader.GetString(22);
-                pData.sello_pass = reader.GetString(23);
-                pData.cadena_cer = reader.GetString(24);
-                pData.num_cer = reader.GetString(25);
-                pData.logo_cuadrado = reader.GetString(26);
-                pData.logo_banner = reader.GetString(27);
-                pData.foto_perfil = reader.GetInt32(28);
+                pData.ret_iva = reader.GetDecimal(13);
+                pData.ret_isr = reader.GetDecimal(14);
+                pData.lugar_expedicion = reader.GetString(15);
+                pData.factura_serie = reader.GetString(16);
+                pData.factura_folio = reader.GetInt32(17);
+                pData.tipo_logo = reader.GetInt32(18);
+                pData.path_cer = reader.GetString(19);
+                pData.path_key = reader.GetString(20);
+                pData.sello_pass = reader.GetString(21);
+                pData.cadena_cer = reader.GetString(22);
+                pData.num_cer = reader.GetString(23);
+                pData.logo_cuadrado = reader.GetString(24);
+                pData.logo_banner = reader.GetString(25);
+                pData.cot_folio = reader.GetInt32(26);
+                pData.cot_serie = reader.GetString(27);
+                pData.ventas_folio = reader.GetInt32(28);
+                pData.ventas_serie = reader.GetString(29);
+                pData.timbre_user = reader.GetString(30);
+                pData.timbre_pass = reader.GetString(31);
             }
 
             conexion.Close();
@@ -116,42 +159,97 @@ namespace Mi_Negocio.Options
 
         }
 
-        public static int Actualizar(Configuracion pData)
+        public static int updateEmpresa(Configuracion pData)
         {
             int retorno = 0;
             MySqlConnection conexion = Connection.ObtenerConexion();
 
-            MySqlCommand cmd = new MySqlCommand(string.Format(" UPDATE cfg  " +
+            MySqlCommand cmd = new MySqlCommand(string.Format(" UPDATE cfg_configuracion  " +
             " SET " +
-             " regimen = '{0}' " +
-             " ,nombre = '{1}' " +
-             " ,rfc = '{2}' " +
-             " ,calle = '{3}' " +
-             " ,n_ext = '{4}' " +
-             " ,n_int = '{5}' " +
-             " ,colonia = '{6}' " +
-             " ,cp = '{7}' " +
-             " ,localidad = '{8}' " +
-             " ,municipio = '{9}' " +
-             " ,estado = '{10}' " +
-             " ,telefono = '{11}' " +
-             " ,email = '{12}' " +
-             " ,iva = {13} " +
-             " ,ieps = {14} " +
-             " ,ret_iva = {15} " +
-             " ,ret_isr = {16} " +
-             " ,lugar_expedicion = '{17}' " +
-             " ,serie = '{18}' " +
-             " ,folio_actual = '{19}' " +
-             " ,folio_final = '{20}' " +
+             " nombre = '{0}'  " +
+             " ,rfc = '{1}'  " +
+             " ,calle = '{2}'  " +
+             " ,n_ext = '{3}'  " +
+             " ,n_int = '{4}'  " +
+             " ,colonia = '{5}'  " +
+             " ,cp = '{6}'  " +
+             " ,localidad = '{7}'  " +
+             " ,municipio = '{8}'  " +
+             " ,estado = '{9}'  " +
+             " ,telefono = '{10}'  " +
+             " ,email = '{11}'  " +
+             " ,ret_iva = {12}  " +
+             " ,ret_isr = {13}  " +
+             " ,cot_folio = {14}  " +
+             " ,cot_serie = '{15}'  " +
+             " ,ventas_folio = 16  " +
+             " ,ventas_serie = '{17}'  " +
             " WHERE " +
-              " id_cfg = {21} ",
-             pData.regimen, pData.nombre, pData.rfc, pData.calle, pData.n_ext, pData.n_int, pData.colonia, pData.cp, pData.localidad, pData.municipio, pData.estado, pData.telefono, pData.email, pData.iva, pData.ieps, pData.ret_iva, pData.ret_isr, pData.lugar_expedicion, pData.serie, pData.folio_actual, pData.folio_final, pData.id_cfg
+              " id_cfg = {18}  " ,
+              pData.nombre,
+             pData.rfc,
+             pData.calle,
+             pData.n_ext,
+             pData.n_int,
+             pData.colonia,
+             pData.cp,
+             pData.localidad,
+             pData.municipio,
+             pData.estado,
+             pData.telefono,
+             pData.email,
+             pData.ret_iva,
+             pData.ret_isr,
+             pData.cot_folio,
+             pData.cot_serie,
+             pData.ventas_folio,
+             pData.ventas_serie,
+             pData.id_cfg
             ), conexion);
             retorno = cmd.ExecuteNonQuery();
             conexion.Close();
             return retorno;
         }
+
+        public static int saveFacturacion(Configuracion pData)
+        {
+            int retorno = 0;
+            MySqlConnection conexion = Connection.ObtenerConexion();
+
+            MySqlCommand cmd = new MySqlCommand(string.Format(" UPDATE cfg_configuracion  " +
+            " SET " +
+              "regimen = '{0}'"
+             +",lugar_expedicion = '{1}'"
+             +",factura_serie = '{2}'"
+             +",factura_folio = {3}"
+             +",path_cer = '{4}'"
+             +",path_key = '{5}'"
+             +",sello_pass = '{6}'"
+             +",cadena_cer ={7} "
+             +",num_cer = '{8}'"
+             +",timbre_pass = ''{9},"
+             +",timbre_user = '{10}'"+
+            " WHERE " +
+              " id_cfg = {11}  ",
+                pData.regimen,
+                pData.lugar_expedicion,
+                pData.factura_serie,
+                pData.factura_folio,
+                pData.path_cer,
+                pData.path_key,
+                pData.sello_pass,
+                pData.cadena_cer,
+                pData.num_cer,
+                pData.timbre_pass,
+                pData.timbre_user,
+             pData.id_cfg
+            ), conexion);
+            retorno = cmd.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+        }
+
         /*Aumenta el folio */
         public static void setFolio(int id_cfg, int folio)
         {

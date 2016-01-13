@@ -3,6 +3,7 @@ using Mi_Negocio.Clientes;
 using Mi_Negocio.Contabilidad;
 using Mi_Negocio.Cotizaciones;
 using Mi_Negocio.Datasource;
+using Mi_Negocio.Options;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,12 @@ namespace Mi_Negocio
         {
             frmAlmacen al = new frmAlmacen();
             al.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmConfiguracion frm = new frmConfiguracion();
+            frm.Show();
         }
 
     }

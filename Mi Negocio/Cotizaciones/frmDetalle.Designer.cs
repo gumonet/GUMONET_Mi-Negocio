@@ -58,6 +58,8 @@
             this.txtSerie = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtImpuestos = new System.Windows.Forms.TextBox();
@@ -110,8 +112,6 @@
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -141,7 +141,6 @@
             this.groupBox1.Size = new System.Drawing.Size(730, 112);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtEmail
             // 
@@ -340,6 +339,23 @@
             this.groupBox3.Size = new System.Drawing.Size(166, 119);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Location = new System.Drawing.Point(67, 13);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(91, 20);
+            this.txtDescuento.TabIndex = 16;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 20);
+            this.label21.Name = "label21";
+            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label21.Size = new System.Drawing.Size(59, 13);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Descuento";
             // 
             // txtTotal
             // 
@@ -773,6 +789,7 @@
             this.conceptoCodigo.Name = "conceptoCodigo";
             this.conceptoCodigo.Size = new System.Drawing.Size(97, 20);
             this.conceptoCodigo.TabIndex = 17;
+            this.conceptoCodigo.DoubleClick += new System.EventHandler(this.conceptoCodigo_DoubleClick);
             // 
             // label16
             // 
@@ -837,23 +854,6 @@
             this.label18.Size = new System.Drawing.Size(245, 22);
             this.label18.TabIndex = 20;
             this.label18.Text = "C   O   N   C   E   P   T   O   S";
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Location = new System.Drawing.Point(67, 13);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(91, 20);
-            this.txtDescuento.TabIndex = 16;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 20);
-            this.label21.Name = "label21";
-            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label21.Size = new System.Drawing.Size(59, 13);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "Descuento";
             // 
             // frmDetalle
             // 

@@ -47,3 +47,4 @@ F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Alm
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Almacenes.Productos.frmProductos.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Almacenes.Categorias.frmListCategorias.resources
 F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Clientes.frmListDepartamentos.resources
+F:\Proyectos\net_proyects\GUMONET_Mi-Negocio\Mi Negocio\obj\Debug\Mi_Negocio.Almacenes.Productos.listProductos.resources

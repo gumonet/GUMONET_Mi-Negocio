@@ -64,6 +64,37 @@ namespace Mi_Negocio.Almacenes.Productos
             return _lista;
         }
 
+        public static List<Producto> frmBuscar(string pSearch = " ")
+        {
+            List<Producto> _lista = new List<Producto>();
+            MySqlConnection conexion = Connection.ObtenerConexion();
+            MySqlCommand cmd = new MySqlCommand(String.Format(
+                "SELECT id_producto, identificador, concat_ws(' ',nombre, descripcion) nombre from v_alm_productos where campo_buscar like '%{0}%' ", pSearch), conexion);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Producto pData = new Producto();
+                pData.id_producto = reader.GetInt64(0);
+                pData.identificador = reader.GetString(1);
+                pData.nombre = reader.GetString(2);
+              /*  pData.unidad_medida = reader.GetString(3);
+                pData.categoria = reader.GetString(4);
+                pData.id_categoria = reader.GetInt32(5);
+                pData.precio_compra = reader.GetDecimal(6);
+                pData.precio_venta = reader.GetDecimal(7);
+                pData.iva = reader.GetDecimal(8);
+                pData.ieps = reader.GetDecimal(9);
+                pData.existencia = reader.GetDecimal(10);*/
+
+                _lista.Add(pData);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
+
+
         public static Producto obtener(Int64 pId)
         {
             MySqlConnection conexion = Connection.ObtenerConexion();
@@ -103,7 +134,8 @@ namespace Mi_Negocio.Almacenes.Productos
         {
             int retorno = 0;
             MySqlConnection conexion = Connection.ObtenerConexion();
-            string squery = string.Format("UPDATE alm_productos SET identificador = '{0}' ,nombre = '{1}' ,descripcion = '{2}' ,unidad_medida = '{3}' ,n_parte = '{4}' ,id_categoria = {5} ,proveedor = '{6}' ,precio_compra = {7} ,precio_venta = {8} ,existencia = {9} ,inventario_bajo = {10} ,iva = {11} ,ieps = {12} ,imagen = '{13}' WHERE   id_producto = {14} ",
+            string squery = string.Format("UPDATE alm_productos SET identificador = '{0}' ,nombre = '{1}' ,descripcion = '{2}' ,unidad_medida = '{3}' ,n_parte = '{4}' ,id_categoria = {5} ,"+
+                "proveedor = '{6}' ,precio_compra = {7} ,precio_venta = {8} ,inventario_bajo = {10} ,iva = {11} ,ieps = {12} ,imagen = '{13}' WHERE   id_producto = {14} ",
                 pData.identificador,
                 pData.nombre,
                 pData.descripcion,
@@ -113,6 +145,7 @@ namespace Mi_Negocio.Almacenes.Productos
                 pData.proveedor,
                 pData.precio_compra,
                 pData.precio_venta,
+                pData.existencia,
                 pData.inventario_bajo,
                 pData.iva,
                 pData.ieps,

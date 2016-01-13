@@ -7,41 +7,45 @@ namespace Mi_Negocio.Options
 {
     class Configuracion
     {
-        public int id_cfg { set; get; }
-        public string regimen { set; get; }
-        public string nombre { set; get; }
-        public string rfc { set; get; }
-        public string calle { set; get; }
-        public string n_ext { set; get; }
-        public string n_int { set; get; }
-        public string colonia { set; get; }
-        public string cp { set; get; }
-        public string localidad { set; get; }
-        public string municipio { set; get; }
-        public string estado { set; get; }
-        public string telefono { set; get; }
-        public string email { set; get; }
-        public decimal iva { set; get; }
-        public decimal ieps { set; get; }
-        public decimal ret_iva { set; get; }
-        public decimal ret_isr { set; get; }
-        public string lugar_expedicion { set; get; }
-        public string serie { set; get; }
-        public int folio_actual { set; get; }
-        public string folio_final { set; get; }
-       public int foto_perfil { set; get; }
-      public string path_cer { set; get; }
-       public string path_key  { set; get; }
-       public string sello_pass { set; get; }
-       public string logo_cuadrado { set; get; }
-       public string logo_banner { set; get; }
-       public string cadena_cer { set; get; }
-       public string num_cer { set; get; }
+        public Int32 id_cfg { get; set; }
+        public String regimen { get; set; }
+        public String nombre { get; set; }
+        public String rfc { get; set; }
+        public String calle { get; set; }
+        public String n_ext { get; set; }
+        public String n_int { get; set; }
+        public String colonia { get; set; }
+        public String cp { get; set; }
+        public String localidad { get; set; }
+        public String municipio { get; set; }
+        public String estado { get; set; }
+        public String telefono { get; set; }
+        public String email { get; set; }
+        public decimal iva { get; set; }
+        public decimal ieps { get; set; }
+        public decimal ret_iva { get; set; }
+        public decimal ret_isr { get; set; }
+        public String lugar_expedicion { get; set; }
+        public String factura_serie { get; set; }
+        public Int32 factura_folio { get; set; }
+        public Int32 tipo_logo { get; set; }
+        public String path_cer { get; set; }
+        public String path_key { get; set; }
+        public String sello_pass { get; set; }
+        public String cadena_cer { get; set; }
+        public String num_cer { get; set; }
+        public String logo_cuadrado { get; set; }
+        public String logo_banner { get; set; }
+        public Int32 cot_folio { get; set; }
+        public String cot_serie { get; set; }
+        public Int32 ventas_folio { get; set; }
+        public String ventas_serie { get; set; }
+        public String timbre_user { get; set; }
+        public String timbre_pass { get; set; }
 
         public Configuracion() { }
 
-        public Configuracion(int id_cfg, string regimen, string nombre, string rfc, string calle, string n_ext, string n_int, string colonia, string cp, string localidad, string municipio, string estado, string telefono, string email, decimal iva, decimal ieps, decimal ret_iva, decimal ret_isr, string lugar_expedicion, string serie, int folio_actual, string folio_final
-            , int foto_perfil, string path_cer, string path_key, string sello_pass, string logo_cuadrado, string logo_banner, string cadena_cer, string num_cer)
+        public Configuracion(Int32 id_cfg, String regimen, String nombre, String rfc, String calle, String n_ext, String n_int, String colonia, String cp, String localidad, String municipio, String estado, String telefono, String email, decimal iva, decimal ieps, decimal ret_iva, decimal ret_isr, String lugar_expedicion, String factura_serie, Int32 factura_folio, Int32 tipo_logo, String path_cer, String path_key, String sello_pass, String cadena_cer, String num_cer, String logo_cuadrado, String logo_banner, Int32 cot_folio, String cot_serie, Int32 ventas_folio, String ventas_serie, String timbre_user, String timbre_pass)
         {
             this.id_cfg = id_cfg;
             this.regimen = regimen;
@@ -62,17 +66,22 @@ namespace Mi_Negocio.Options
             this.ret_iva = ret_iva;
             this.ret_isr = ret_isr;
             this.lugar_expedicion = lugar_expedicion;
-            this.serie = serie;
-            this.folio_actual = folio_actual;
-            this.folio_final = folio_final;
-            this.foto_perfil = foto_perfil;
+            this.factura_serie = factura_serie;
+            this.factura_folio = factura_folio;
+            this.tipo_logo = tipo_logo;
             this.path_cer = path_cer;
-            this.path_key=path_key;
+            this.path_key = path_key;
             this.sello_pass = sello_pass;
-            this.logo_cuadrado = logo_cuadrado;
-            this.logo_banner = logo_banner;
             this.cadena_cer = cadena_cer;
             this.num_cer = num_cer;
+            this.logo_cuadrado = logo_cuadrado;
+            this.logo_banner = logo_banner;
+            this.cot_folio = cot_folio;
+            this.cot_serie = cot_serie;
+            this.ventas_folio = ventas_folio;
+            this.ventas_serie = ventas_serie;
+            this.timbre_user = timbre_user;
+            this.timbre_pass = timbre_pass;
         }
     }
 }

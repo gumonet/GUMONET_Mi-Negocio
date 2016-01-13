@@ -1,4 +1,6 @@
-﻿using Mi_Negocio.Clientes;
+﻿using Mi_Negocio.Almacenes.Productos;
+using Mi_Negocio.Clientes;
+using Mi_Negocio.Options;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +17,10 @@ namespace Mi_Negocio.Cotizaciones
         private int idCliente { get; set; }
         private int guardado = 0;
         private String vRfcEmisor;
+        public int empresaActual = 1;
         private bool isNew { get; set; }
         public Int64 id_cotizacion { get; set; }
-        
-        
+               
         
         public frmDetalle()
         {
@@ -68,20 +70,38 @@ namespace Mi_Negocio.Cotizaciones
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+
+        private void conceptoCodigo_DoubleClick(object sender, EventArgs e)
         {
+            listProductos fmr = new listProductos();
 
+            if (fmr.ShowDialog() == DialogResult.OK)
+            { 
+                loadDataProducto(fmr.idProducto);
+            }
         }
-
 
         /************************************
                     Custom Functios 
          ************************************/
+
+        private void loadDataProducto(Int64 idProducto)
+        {
+            Producto pData = ProductoDal.obtener(idProducto);
+            conceptoCodigo.Text = pData.identificador;
+            conceptoNombre.Text = pData.nombre;
+            conceptoUnidad.Text = pData.unidad_medida;
+            conceptoPrecio.Text = pData.precio_venta.ToString();
+            conceptoIva.Text = pData.iva.ToString();
+            conceptoIeps.Text = pData.ieps.ToString();            
+
+        }
         //Crea una nueva factura
         private void createNew()
         {
             //Obtiene los datos para una nueva cotización.
             Cotizacion pData = new Cotizacion();
+            Configuracion cfg = ConfiguracionDal.Obtener(this.empresaActual);
             
             pData.folio = "";
             pData.importe_sub  = 0.00m;
@@ -94,11 +114,10 @@ namespace Mi_Negocio.Cotizaciones
             pData.condicion_pago="";
             pData.condicion_embarque = "";
             pData.plazo_entrega = "";
-            pData.tipo=0;
+            pData.tipo=1;
             pData.importe_desc = 0.00m;            
                 
             this.id_cotizacion = CotizacionDal.agregar(pData);
-
 
             /*Configuracion cfgFactura = ConfigDal.Obtener(this.empresa_actual);
             Facturas pData = new Facturas();
@@ -126,6 +145,8 @@ namespace Mi_Negocio.Cotizaciones
 
             this.guardado = 0;/*Coloca una variable para saber si la factura se guardo antes de cerrar el formulario*/
         }
+
+       
 
         //Optiene los datos de la factura
         /*private void getData()
